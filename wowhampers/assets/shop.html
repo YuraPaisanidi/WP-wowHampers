@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Shop</title>
+	<meta name="description" content="Wow Hamper">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<nav class="header__nav">
+				<ul>
+					<li class="header__nav_submenu">
+						<a href="#about" class="header__nav_item header__nav_item--shop">Shop</a>
+						<ul>
+							<li><a href="#">Shop 1</a></li>
+							<li><a href="#">Shop 1</a></li>
+							<li><a href="#">Shop 1</a></li>
+						</ul>
+					</li>
+					<li><a href="#about" class="header__nav_item">About</a></li>
+					<li><a href="#about" class="header__nav_item">FAQ</a></li>
+					<li><a href="#about" class="header__nav_item">Blog</a></li>
+					<li><a href="#about" class="header__nav_item">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+			<div class="header__btns">
+
+				<div class="header__btns_item header__btns_item--search">
+					<a href="#">
+						<img src="img/search.svg" alt="">
+						<ul>
+							<li>
+								<!-- <input type="search"> -->
+							</li>
+						</ul>
+					</a>
+				</div>
+
+				<div class="header__btns_item">
+					<a href="#"><img src="img/wishlist.svg" alt=""></a>
+				</div>
+
+				<div class="header__btns_item">
+					<a href="#"><img src="img/cart.svg" alt=""></a>
+				</div>
+
+				<div class="header__btns_item header__btns_item--profile">
+					<a href="#"><img src="img/user.svg" alt=""><span>adress@gmail.com</span></a>
+					<ul>
+						<li><a href="#">adress@gmail.com</a></li>
+						<li><a href="#">adress@gmail.com</a></li>
+						<li><a href="#">adress@gmail.com</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__item"></span>
+			</button>
+
+		</div>
+	</header>
+
+	<section class="shop">
+		<div class="favorites__container">
+			<h4 class="h4 favorites__title shop__title">Favorites</h4>
+			<div class="shop__filters">
+				<span>Filters:</span>
+				<div class="shop__filters_items">
+					<a href="#">For her</a>
+					<a href="#" class="active">Party Hampers</a>
+					<a href="#">Corporate gifts</a>
+				</div>
+			</div>
+			<div class="favorites__wrap">
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="favorites__item">
+					<div class="gifts__slide_top">
+						<span class="gifts__slide_label">New</span>
+						<div class="gifts__slide_img">
+							<img src="img/gift.jpg" alt="">
+						</div>
+					</div>
+					<div class="gifts__slide_bottom">
+						<p class="gifts__slide_price"><s>$55</s>$36</p>
+						<p class="gifts__slide_name">Dreambox</p>
+						<div class="gifts__slide_btns">
+							<button class="wishlist">
+								<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20.2913 2.61183C19.7805 2.10083 19.1741 1.69547 18.5066 1.41891C17.8392 1.14235 17.1238 1 16.4013 1C15.6788 1 14.9634 1.14235 14.2959 1.41891C13.6285 1.69547 13.022 2.10083 12.5113 2.61183L11.4513 3.67183L10.3913 2.61183C9.3596 1.58013 7.96032 1.00053 6.50129 1.00053C5.04226 1.00053 3.64298 1.58013 2.61129 2.61183C1.5796 3.64352 1 5.04279 1 6.50183C1 7.96086 1.5796 9.36013 2.61129 10.3918L3.67129 11.4518L11.4513 19.2318L19.2313 11.4518L20.2913 10.3918C20.8023 9.88107 21.2076 9.27464 21.4842 8.60718C21.7608 7.93972 21.9031 7.22431 21.9031 6.50183C21.9031 5.77934 21.7608 5.06393 21.4842 4.39647C21.2076 3.72901 20.8023 3.12258 20.2913 2.61183V2.61183Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<button class="cart">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#4A4967" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</a>
+			</div>
+			<a href="#" class="favorites__btn btn">See More</a>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__main">
+				<div class="footer__menu">
+					<p class="footer__menu_title">Menu</p>
+					<ul class="footer__menu_item">
+						<li><a href="#">Catalogue</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+	
+				<div class="footer__center">
+	
+					<div class="footer__logo">
+						<img src="img/logo--white.svg" alt="">
+					</div>
+	
+					<div class="footer__links">
+						<a href="#">
+							<img src="img/fb.svg" alt="">
+						</a>
+						<a href="#">
+							<img src="img/ytb.svg" alt="">
+						</a>
+						<a href="#">
+							<img src="img/inst.svg" alt="">
+						</a>
+					</div>
+	
+					<form action="#" method="POST" class="form footer__subscribe">
+						<p>Subscribe!</p>
+	
+						<div class="form__item footer__subscribe_item">
+							<input id="formMail" type="email" name="mail" placeholder="Your Email" class="form__input email__input _req _email">
+							<button type="submit" class="form__btn_button email__btn" name="submit">
+								<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.35355 4.35355C9.54882 4.15829 9.54882 3.84171 9.35355 3.64645L6.17157 0.464466C5.97631 0.269204 5.65973 0.269204 5.46447 0.464466C5.2692 0.659728 5.2692 0.976311 5.46447 1.17157L8.29289 4L5.46447 6.82843C5.2692 7.02369 5.2692 7.34027 5.46447 7.53553C5.65973 7.7308 5.97631 7.7308 6.17157 7.53553L9.35355 4.35355ZM0 4.5H9V3.5H0V4.5Z" fill="#4A4967"/>
+								</svg>
+							</button>
+						</div>
+					</form>
+	
+				</div>
+	
+				<div class="footer__contacts">
+					<p class="footer__contacts_title">Contacts</p>
+					<a href="tel:+3200123456780" class="footer__contacts_tel">3 200 1234 56 780</a>
+					<a href="tel:+3200123456780" class="footer__contacts_tel">3 200 1234 56 780</a>
+					<a href="mailto:info@gmail.com" class="footer__contacts_email">info@gmail.com</a>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<p>2021, All rights reserved</p>
+				<span>Created by <a href="http://flex-design.net/">FlexDesign</a></span>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

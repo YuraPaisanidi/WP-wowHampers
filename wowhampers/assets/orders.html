@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Profile</title>
+	<meta name="description" content="Wow Hamper">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<nav class="header__nav">
+				<ul>
+					<li class="header__nav_submenu">
+						<a href="#about" class="header__nav_item header__nav_item--shop">Shop</a>
+						<ul>
+							<li><a href="#">Shop 1</a></li>
+							<li><a href="#">Shop 1</a></li>
+							<li><a href="#">Shop 1</a></li>
+						</ul>
+					</li>
+					<li><a href="#about" class="header__nav_item">About</a></li>
+					<li><a href="#about" class="header__nav_item">FAQ</a></li>
+					<li><a href="#about" class="header__nav_item">Blog</a></li>
+					<li><a href="#about" class="header__nav_item">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+			<div class="header__btns">
+
+				<div class="header__btns_item header__btns_item--search">
+					<a href="#">
+						<img src="img/search.svg" alt="">
+						<ul>
+							<li>
+								<!-- <input type="search"> -->
+							</li>
+						</ul>
+					</a>
+				</div>
+
+				<div class="header__btns_item">
+					<a href="#"><img src="img/wishlist.svg" alt=""></a>
+				</div>
+
+				<div class="header__btns_item">
+					<a href="#"><img src="img/cart.svg" alt=""></a>
+				</div>
+
+				<div class="header__btns_item header__btns_item--profile">
+					<a href="#"><img src="img/user.svg" alt=""><span>adress@gmail.com</span></a>
+					<ul>
+						<li><a href="#">adress@gmail.com</a></li>
+						<li><a href="#">adress@gmail.com</a></li>
+						<li><a href="#">adress@gmail.com</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__item"></span>
+			</button>
+
+		</div>
+	</header>
+
+	<section class="profile">
+		<div class="profile__wrap">
+			<div class="profile__nav">
+				<ul>
+					<li>
+						<a href="#" class="active">Profile</a>
+					</li>
+					<li>
+						<a href="#">My orders</a>
+					</li>
+					<li>
+						<a href="#">Password changing</a>
+					</li>
+					<li>
+						<a href="#">Logout</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="profile__content profile__content--order">
+				<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
+					<thead>
+						<tr>
+							<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number"><span
+									class="nobr">Order number</span></th>
+							<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date"><span
+									class="nobr">Date</span></th>
+							<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status"><span
+									class="nobr">Status</span></th>
+							<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total"><span
+									class="nobr">Amount</span></th>
+							<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions"><span
+									class="nobr">Actions</span></th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order number">
+								<a href="#">
+									6525 </a>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+								<time datetime="2020-10-30T11:49:34+00:00">24/04/2021</time>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+								In process
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Amount">
+								<span class="woocommerce-Price-amount amount"><bdi>1,000<span
+											class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+								<a href="#"
+									class="woocommerce-button button view">View order</a>
+							</td>
+						</tr>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order number">
+								<a href="#">
+									6525 </a>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+								<time datetime="2020-10-30T11:49:34+00:00">24/04/2021</time>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+								In process
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Amount">
+								<span class="woocommerce-Price-amount amount"><bdi>1,000<span
+											class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+								<a href="#"
+									class="woocommerce-button button view">View order</a>
+							</td>
+						</tr>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order number">
+								<a href="#">
+									6525 </a>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+								<time datetime="2020-10-30T11:49:34+00:00">24/04/2021</time>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+								In process
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Amount">
+								<span class="woocommerce-Price-amount amount"><bdi>1,000<span
+											class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+								<a href="#"
+									class="woocommerce-button button view">View order</a>
+							</td>
+						</tr>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order number">
+								<a href="#">
+									6525 </a>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+								<time datetime="2020-10-30T11:49:34+00:00">24/04/2021</time>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+								In process
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Amount">
+								<span class="woocommerce-Price-amount amount"><bdi>1,000<span
+											class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+								<a href="#"
+									class="woocommerce-button button view">View order</a>
+							</td>
+						</tr>
+						<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order number">
+								<a href="#">
+									6525 </a>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
+								<time datetime="2020-10-30T11:49:34+00:00">24/04/2021</time>
+				
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
+								In process
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Amount">
+								<span class="woocommerce-Price-amount amount"><bdi>1,000<span
+											class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+							</td>
+							<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions" data-title="Actions">
+								<a href="#"
+									class="woocommerce-button button view">View order</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__main">
+				<div class="footer__menu">
+					<p class="footer__menu_title">Menu</p>
+					<ul class="footer__menu_item">
+						<li><a href="#">Catalogue</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+	
+				<div class="footer__center">
+	
+					<div class="footer__logo">
+						<img src="img/logo--white.svg" alt="">
+					</div>
+	
+					<div class="footer__links">
+						<a href="#">
+							<img src="img/fb.svg" alt="">
+						</a>
+						<a href="#">
+							<img src="img/ytb.svg" alt="">
+						</a>
+						<a href="#">
+							<img src="img/inst.svg" alt="">
+						</a>
+					</div>
+	
+					<form action="#" method="POST" class="form footer__subscribe">
+						<p>Subscribe!</p>
+	
+						<div class="form__item footer__subscribe_item">
+							<input id="formMail" type="email" name="mail" placeholder="Your Email" class="form__input email__input _req _email">
+							<button type="submit" class="form__btn_button email__btn" name="submit">
+								<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.35355 4.35355C9.54882 4.15829 9.54882 3.84171 9.35355 3.64645L6.17157 0.464466C5.97631 0.269204 5.65973 0.269204 5.46447 0.464466C5.2692 0.659728 5.2692 0.976311 5.46447 1.17157L8.29289 4L5.46447 6.82843C5.2692 7.02369 5.2692 7.34027 5.46447 7.53553C5.65973 7.7308 5.97631 7.7308 6.17157 7.53553L9.35355 4.35355ZM0 4.5H9V3.5H0V4.5Z" fill="#4A4967"/>
+								</svg>
+							</button>
+						</div>
+					</form>
+	
+				</div>
+	
+				<div class="footer__contacts">
+					<p class="footer__contacts_title">Contacts</p>
+					<a href="tel:+3200123456780" class="footer__contacts_tel">3 200 1234 56 780</a>
+					<a href="tel:+3200123456780" class="footer__contacts_tel">3 200 1234 56 780</a>
+					<a href="mailto:info@gmail.com" class="footer__contacts_email">info@gmail.com</a>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<p>2021, All rights reserved</p>
+				<span>Created by <a href="http://flex-design.net/">FlexDesign</a></span>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
