@@ -4,7 +4,9 @@
 			<div class="footer__menu">
 				<p class="footer__menu_title">Menu</p>
 				<ul class="footer__menu_item">
-					<li><a href="#">Catalogue</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">Corporate</a></li>
+					<li><a href="#">Shipping</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Reviews</a></li>
 					<li><a href="#">Blog</a></li>
@@ -17,18 +19,15 @@
 			<div class="footer__center">
 
 				<div class="footer__logo">
-					<img src="img/logo--white.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo--white.svg" alt="">
 				</div>
 
 				<div class="footer__links">
 					<a href="#">
-						<img src="img/fb.svg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/fb.svg" alt="">
 					</a>
 					<a href="#">
-						<img src="img/ytb.svg" alt="">
-					</a>
-					<a href="#">
-						<img src="img/inst.svg" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/inst.svg" alt="">
 					</a>
 				</div>
 
