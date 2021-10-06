@@ -3,8 +3,6 @@
 get_header();
 ?>
 
-<?php get_header(); ?>
-
 <section class="faq">
 	<div class="faq__container">
 		<h4 class="h4 faq__title">FAQ</h4>

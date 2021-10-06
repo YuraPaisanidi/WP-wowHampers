@@ -8,32 +8,51 @@ get_header();
 		<div class="parallax parallax--1">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/confetti.png" alt="">
 		</div>
-		<div class="swiper hero__slider">
-			<div class="swiper-wrapper hero__wrapper">
+		
+		<?php if( have_rows('hero') ): ?>
+			<div class="swiper hero__slider">
+				<div class="swiper-wrapper hero__wrapper">
+					<?php while( have_rows('hero') ): the_row(); 
+						$title = get_sub_field('title');
+						$subtitle = get_sub_field('subtitle');
+						$img = get_sub_field('img');
+						$span = get_sub_field('span');
+						$color = get_sub_field('color');
+						?>
 
-				<div class="swiper-slide hero__slide hero__slide--color1">
-					<div class="hero__text">
-						<p class="hero__text_subtitle">
-							Awesome gifts are pricey? Not anymore!
-						</p>
-						<div class="hero__text_price">
-							<h2 class="h2 hero__text_title">
-								Wow Hampers<br> starting just at
-							</h2>
-							<span class="hero__text_num"><span>$</span>50</span>
-						</div>
-						<div class="hero__btns">
-							<a href="#" class="hero__btns_view btn">View Hampers!</a>
-							<a href="#" class="hero__btns_view btn">Build WOW Box!</a>
-						</div>
-					</div>
+						<div class="swiper-slide hero__slide hero__slide--<?php echo $color; ?>">
+							<div class="hero__text">
+								<p class="hero__text_subtitle">
+									<?php echo $subtitle; ?>
+								</p>
+								<div class="hero__text_price">
+									<h2 class="h2 hero__text_title">
+										<?php echo $title; ?>
+									</h2>
+									<span class="hero__text_num"><?php echo $span; ?></span>
+								</div>
+								<div class="hero__btns">
+									<a href="#" class="hero__btns_view btn">View Hampers!</a>
+									<a href="#" class="hero__btns_view btn">Build WOW Box!</a>
+								</div>
+							</div>
 
-					<div class="hero__img">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/box.png" alt="">
-					</div>
+							<div class="hero__img">
+								<img src="<?php echo $img; ?>" alt="">
+							</div>
+						</div>
+
+						
+
+					<?php endwhile; ?>
 				</div>
+				<div class="swiper-pagination hero__slider_pagination"></div>
+			</div>
+		<?php endif; ?>
 
-				<div class="swiper-slide hero__slide hero__slide--color2">
+
+
+				<!--<div class="swiper-slide hero__slide hero__slide--color2">
 					<div class="hero__text">
 						<p class="hero__text_subtitle">
 							No time for gift shopping? No stress!
@@ -53,6 +72,7 @@ get_header();
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/girl.png" alt="">
 					</div>
 				</div>
+
 				<div class="swiper-slide hero__slide hero__slide--color3">
 					<div class="hero__text">
 						<p class="hero__text_subtitle">
@@ -72,11 +92,9 @@ get_header();
 					<div class="hero__img">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/man.png" alt="">
 					</div>
-				</div>
+				</div> -->
 
-			</div>
-			<div class="swiper-pagination hero__slider_pagination"></div>
-		</div>
+
 	</div>
 </section>
 
