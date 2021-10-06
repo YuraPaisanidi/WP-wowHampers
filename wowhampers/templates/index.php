@@ -471,159 +471,42 @@ get_header();
 	</div>
 </section>
 
-<section class="reviews">
-	<div class="reviews__wrap">
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
+
+
+<?php if( have_rows('rev') ): ?>
+	<section class="reviews">
+		<div class="reviews__wrap">
+			<?php while( have_rows('rev') ): the_row(); 
+				$img = get_sub_field('img');
+				$user = get_sub_field('user');
+				$text = get_sub_field('text');
+				// $icon = get_sub_field('icon');
+				?>
+
+				<div class="reviews__item">
+					<div class="reviews__item_img">
+						<img src="<?php echo $img ?>" alt="">
+					</div>
+					<div class="reviews__item_info">
+						<div class="reviews__item_link">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
+							<span><?php echo $user ?></span>
+						</div>
+						<p class="reviews__item_text">
+							<?php echo $text ?>
+						</p>
+					</div>
 				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
+
+			<?php endwhile; ?>
+
 		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-		<div class="reviews__item">
-			<div class="reviews__item_img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/review.jpg" alt="">
-			</div>
-			<div class="reviews__item_info">
-				<div class="reviews__item_link">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/insta.svg" alt="">
-					<span>@username1234</span>
-				</div>
-				<p class="reviews__item_text">
-					Tristique tellus volutpat praesent tristique aliquam id. Molestie 
-					adipiscing accumsan, arcu tortor etiam tristique.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
+	</section>
+<?php endif; ?>
+
+
+
+
+
 
 <?php get_footer();

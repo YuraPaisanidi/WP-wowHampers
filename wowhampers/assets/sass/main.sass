@@ -929,12 +929,15 @@
 .reviews
 	padding-top: 150px
 
+	+r(1200)
+		padding-top: 60px
+
 	&__wrap
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 
-		+r(992)
-			grid-template-columns: 1fr 1fr 1fr 1fr
+		// +r(992)
+		// 	grid-template-columns: 1fr 1fr 1fr 1fr
 
 		+r(767)
 			grid-template-columns: 1fr 1fr
@@ -974,9 +977,12 @@
 			flex-direction: column
 			align-items: center
 			justify-content: center
-			padding: 0 50px
+			padding: 0 30px
 			opacity: 0
 			+transition
+
+			+r(1200)
+				padding: 0 5px
 
 			&:hover
 				background: $dark
@@ -994,6 +1000,9 @@
 		&_text
 			color: #fff
 			text-align: center
+
+			+r(1200)
+				font-size: 14px
 
 .footer
 	padding-top: 30px
