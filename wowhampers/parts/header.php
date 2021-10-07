@@ -2,7 +2,7 @@
 	<div class="header__container container">
 
 		<nav class="header__nav">
-			<ul>
+			<!-- <ul class="header__nav_menu">
 				<li class="header__nav_submenu">
 					<a href="#about" class="header__nav_item header__nav_item--shop">Shop</a>
 					<ul>
@@ -15,7 +15,15 @@
 				<li><a href="#about" class="header__nav_item">FAQ</a></li>
 				<li><a href="#about" class="header__nav_item">Blog</a></li>
 				<li><a href="#about" class="header__nav_item">Contacts</a></li>
-			</ul>
+			</ul> -->
+
+			<?php 
+				wp_nav_menu( array(
+					'menu'=>'menu-header',
+					'menu_class'=>'header__nav_menu',
+					'theme_location'=>'menu',
+					) );
+				?>
 		</nav>
 
 		<a href="/" class="header__logo">

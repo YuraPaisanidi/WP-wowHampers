@@ -192,8 +192,9 @@
 
 		&--active
 			right: 0
+			z-index: 1
 
-		ul
+		&_menu
 			display: flex
 			gap: 35px
 
@@ -201,67 +202,68 @@
 				flex-direction: column
 				align-items: center
 
+			a
+				color: $dark
+				+transition
+
+				&:hover
+					color: $accent
+
 		&_submenu
 
-			ul
-				position: absolute
-				top: 90%
-				min-width: 200px
-				min-height: 250px
-				height: 20vh
+		.sub-menu
+			position: absolute
+			top: 90%
+			// top: 200%
+			min-width: 200px
+			min-height: 250px
+			height: 20vh
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			text-align: center
+			padding: 30px 20px
+			box-shadow: 0px 4px 18px rgba(89, 92, 164, 0.49);
+			transition: all .6s
+			visibility: hidden
+			opacity: 0
+			overflow: auto
+			border-radius: 15px
+			background-color: #fff
+
+			+r(992)
+				top: 20%
+				right: 37%
+
+			+r(576)
+				right: 25%
+
+			+r(350)
+				right: 13%
+
+			a
 				display: flex
-				flex-direction: column
-				justify-content: space-between
-				text-align: center
-				padding: 30px 20px
-				box-shadow: 0px 4px 18px rgba(89, 92, 164, 0.49);
-				transition: all .6s
-				visibility: hidden
-				opacity: 0
-				overflow: auto
-				border-radius: 15px
-				background-color: #fff
+				align-items: center
+				justify-content: center
+				width: 100%
+				height: 100%
+				color: $dark
+				+transition
 
-				+r(992)
-					top: 20%
-					right: 37%
+				&:hover
+					color: $accent
 
-				+r(576)
-					right: 25%
+				&::after
+					display: none
 
-				+r(350)
-					right: 13%
-
-				a
-					display: flex
-					align-items: center
-					justify-content: center
-					width: 100%
-					height: 100%
-					color: $dark
-					+transition
-
-					&:hover
-						color: $accent
-
-			&:hover
-				ul
-					visibility: visible
-					opacity: 1
-			
 		+r(992)
 			&:hover
 				ul
 					top: 15%
 
-		&_item
-			color: $dark
-			+transition
+		.menu-item-114
 
-			&:hover
-				color: $accent
-			
-			&--shop
+			a
 				position: relative
 
 				&::after
@@ -269,6 +271,11 @@
 					position: absolute
 					left: 110%
 					bottom: 10%
+
+			&:hover
+				ul
+					visibility: visible
+					opacity: 1
 
 
 	&__logo

@@ -3,7 +3,7 @@
 		<div class="footer__main">
 			<div class="footer__menu">
 				<p class="footer__menu_title">Menu</p>
-				<ul class="footer__menu_item">
+				<!-- <ul class="footer__menu_item">
 					<li><a href="#">Shop</a></li>
 					<li><a href="#">Corporate</a></li>
 					<li><a href="#">Shipping</a></li>
@@ -13,7 +13,15 @@
 					<li><a href="#">FAQ</a></li>
 					<li><a href="#">Terms of Service</a></li>
 					<li><a href="#">Privacy Policy</a></li>
-				</ul>
+				</ul> -->
+
+				<?php 
+				wp_nav_menu( array(
+					'menu'=>'menu-footer',
+					'menu_class'=>'footer__menu_item',
+					'theme_location'=>'menu',
+					) );
+				?>
 			</div>
 
 			<div class="footer__center">
