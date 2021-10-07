@@ -1542,12 +1542,19 @@
 					font-size: 30px
 					top: -5%
 					left: -4%
+			
+		ul
+			list-style-type: disc
+
+		ul,ol
+			padding-left: 20px
 
 	&__img
 		margin-bottom: 80px
 		width: 100%
 		border-radius: 15px
 		overflow: hidden
+		max-height: 400px
 
 		+r(992)
 			margin-bottom: 30px
@@ -1600,10 +1607,25 @@
 			grid-template-columns: 1fr
 
 
-
 	&__item
 		display: flex
 		flex-direction: column
+		color: $text
+
+		&:hover
+
+			.blog__img
+				
+				img
+					transform: scale(1.1)
+
+			.blog__name
+				color: $accent
+				text-decoration: underline
+
+			p
+				color: $text !important
+				+transition
 
 		&:first-child
 			grid-column-start: 1
@@ -1611,6 +1633,11 @@
 			display: flex
 			flex-direction: row
 			gap: 60px
+
+			.blog__img
+				max-height: 400px
+				// height: 100%
+				min-height: 300px
 
 			+r(992)
 				gap: 30px
@@ -1660,6 +1687,7 @@
 	&__img
 		max-width: 385px
 		width: 100%
+		max-height: 265px
 		border-radius: 15px
 		overflow: hidden
 		margin-bottom: 30px
@@ -1668,10 +1696,13 @@
 			object-fit: cover
 			width: 100%
 			height: 100%
+			+transition
 
 	&__name
 		@extend .favorites__title
+		color: $dark
 		margin-bottom: 10px
+		+transition
 
 		+r(767)
 			font-size: 16px
@@ -1681,6 +1712,8 @@
 
 		+r(767)
 			font-size: 14px
+
+
 
 //-----------------Contact-us-------------
 .contacts
