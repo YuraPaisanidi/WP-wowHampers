@@ -47,7 +47,7 @@
 		max-width: 480px
 
 // -----BUTTON-----
-.btn
+.btn ,.add_to_cart_button
 	position: relative
 	display: flex
 	justify-content: center
@@ -2315,7 +2315,7 @@
 
 			input[type="radio"] + label
 
-	&__price
+	&__price, .cart
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -2324,7 +2324,7 @@
 			flex-direction: column
 			gap: 10px
 
-		&_quant
+		&_quant, .quantity
 			max-width: 150px
 			width: 100%
 			height: 50px
@@ -2358,6 +2358,15 @@
 
 		&_btn
 			min-width: 150px
+
+	.variations_form
+		flex-direction: column
+
+		table
+			margin-bottom: 50px
+
+		.single_variation_wrap
+			width: 100%
 
 	&__related
 

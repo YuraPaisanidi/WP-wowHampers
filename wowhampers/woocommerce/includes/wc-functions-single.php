@@ -6,7 +6,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // ---------------------------------------------remove actions---------------------------------------
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta',  40 );
 
-
 //--------------------------------------------	description product-----------------------------------------------
   remove_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs',  10 );
 	add_action( 'woocommerce_single_product_summary', 'description', 10 );
@@ -59,4 +58,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	//-----------------------------------Product add to cart------------------------------------------
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart',  30 );
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 50 );
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 50 );
