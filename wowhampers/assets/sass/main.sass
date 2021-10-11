@@ -1,5 +1,8 @@
 @import base
 
+.site-main
+	padding-top: 100px !important
+
 
 .h2
 	font-size: 42px
@@ -787,6 +790,10 @@
 			.gifts__slide_img
 				border-radius: 100%
 
+		&_bottom
+			width: 100%
+			text-align: center
+
 		&_label
 			display: flex
 			align-items: center
@@ -1448,6 +1455,16 @@
 
 		+r(480)
 			padding-left: 10px
+
+		span
+			margin-right: 10px
+
+		select
+			border-radius: 15px;
+			height: 40px;
+			padding-left: 15px
+			border: none;
+			color: $text
 
 
 		&_items
@@ -2154,7 +2171,7 @@
 
 //----------------------Product-------------------
 .product
-	padding-top: 150px
+	// padding-top: 150px
 	padding-bottom: 25px
 
 	+r(576)
