@@ -20,7 +20,7 @@ function project_woocommerce_setup()
 {
 	add_theme_support('woocommerce');
 	add_theme_support('wc-product-gallery-zoom');
-	add_theme_support('wc-product-gallery-lightbox');
+	// add_theme_support('wc-product-gallery-lightbox');
 	add_theme_support('wc-product-gallery-slider');
 }
 add_action('after_setup_theme', 'project_woocommerce_setup');
@@ -168,7 +168,7 @@ if (!function_exists('project_woocommerce_wrapper_before')) {
 	function project_woocommerce_wrapper_before()
 	{
 ?>
-			<main id="main" class="site-main">
+			<main id="main" class="site-main product__container">
 			<?php
 		}
 	}
