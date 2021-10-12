@@ -167,6 +167,7 @@ get_header();
 </section>
 
 <section class="gifts">
+
 	<h3 class="h3 gifts__title">
 		Looking for last minute <span>birthday gift ideas?</span>
 	</h3>
@@ -503,10 +504,6 @@ get_header();
 		</div>
 	</section>
 <?php endif; ?>
-
-
-
-
 
 
 <?php get_footer();

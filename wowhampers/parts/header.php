@@ -2,21 +2,6 @@
 	<div class="header__container container">
 
 		<nav class="header__nav">
-			<!-- <ul class="header__nav_menu">
-				<li class="header__nav_submenu">
-					<a href="#about" class="header__nav_item header__nav_item--shop">Shop</a>
-					<ul>
-						<li><a href="#">Shop 1</a></li>
-						<li><a href="#">Shop 1</a></li>
-						<li><a href="#">Shop 1</a></li>
-					</ul>
-				</li>
-				<li><a href="#about" class="header__nav_item">About</a></li>
-				<li><a href="#about" class="header__nav_item">FAQ</a></li>
-				<li><a href="#about" class="header__nav_item">Blog</a></li>
-				<li><a href="#about" class="header__nav_item">Contacts</a></li>
-			</ul> -->
-
 			<?php 
 				wp_nav_menu( array(
 					'menu'=>'menu-header',
@@ -44,11 +29,11 @@
 			</div>
 
 			<div class="header__btns_item">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/wishlist.svg" alt=""></a>
+			<?php echo do_shortcode( '[ti_wishlist_products_counter]' ); ?>
 			</div>
 
 			<div class="header__btns_item">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.svg" alt=""></a>
+				<a href="<?php echo get_home_url(); ?>/cart"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.svg" alt=""></a>
 			</div>
 
 			<div class="header__btns_item header__btns_item--profile">
