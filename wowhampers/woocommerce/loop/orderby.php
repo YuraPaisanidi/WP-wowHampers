@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<form class="woocommerce-ordering shop__filters" method="get">
-	<div>
+<form class="shop__filters" method="get">
+	<div class="shop__filters_items">
 		<span>Filters:</span>
 		<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 			<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
@@ -30,9 +30,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</select>
 	</div>
 	<div class="shop__filters_items">
-		<a href="#">For her</a>
+		<!--<a href="#">For her</a>
 		<a href="#" class="active">Party Hampers</a>
-		<a href="#">Corporate gifts</a>
+		<a href="#">Corporate gifts</a> -->
+		<?php echo do_shortcode( '[wpf-filters id=1]' ); ?>
 	</div>
 	<input type="hidden" name="paged" value="1" />
 	<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>

@@ -1453,6 +1453,11 @@
 		border-radius: 15px
 		margin-bottom: 45px
 
+		+r(992)
+			flex-direction: column
+			padding-top: 10px
+			height: auto
+
 		+r(480)
 			padding-left: 10px
 
@@ -1465,6 +1470,9 @@
 			padding-left: 15px
 			border: none;
 			color: $text
+
+			+r(480)
+				max-width: 200px
 
 
 		&_items
@@ -1493,6 +1501,52 @@
 				&.active
 					background: $accent
 					color: #fff
+
+		.wpfFilterWrapper
+			padding: 0 !important
+
+		.wpfFilterVerScroll
+			display: flex
+
+			.wpfCheckbox
+				display: none
+
+			.wpfValue
+				background-color: transparent
+
+			.wpfFilterTaxNameWrapper
+
+				+r(480)
+					padding: 0
+					text-align: center
+					font-size: 14px
+
+			.wpfDisplay
+				width: 100%
+				height: 50px
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				padding-left: 15px
+				color: $dark
+				font-weight: 700
+				font-family: $font2
+				font-size: 16px
+				border-radius: 15px
+				border: none
+				+transition
+
+				// +r(480)
+				// 	font-size: 14px
+				// 	text-align: center
+
+				&:hover,
+				&:active
+					background-color: $accent
+					
+
+					.wpfFilterTaxNameWrapper
+						color: #fff
 
 //-----------------FAQ---------------------
 .faq
@@ -2174,8 +2228,8 @@
 	// padding-top: 150px
 	padding-bottom: 25px
 
-	+r(576)
-		padding-top: 120px
+	// +r(576)
+	// 	padding-top: 120px
 
 	&__container
 		max-width: 1230px
