@@ -2541,14 +2541,26 @@
 .product-type-composite
 	display: grid
 	grid-template-columns: 500px 1fr
-	
-	.product__img
-	// 	display: none
-		// max-width: 500px !important
+
+	+r(1200)
+		grid-template-columns: 1fr
+		margin-bottom: 30px
 
 	.wp-post-image
-		max-width: 500px
+		object-fit: cover
+		border-radius: 15px
 		width: 100%
+
+		+r(1200)
+			max-width: 1200px
+
+
+	.product__img
+		+r(1200)
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: auto
 
 	.product__title
 		font-size: 30px
@@ -2569,6 +2581,9 @@
 			.component_inner
 				padding-bottom: 0 !important
 
+		&_component
+			width: 100%
+
 		&_data
 			width: 100%
 
@@ -2577,6 +2592,9 @@
 			flex-direction: column
 			align-items: center
 			width: 100%
+
+			+r(1200)
+				padding-top: 0 !important
 
 			.quantity
 				display: none
@@ -2598,6 +2616,9 @@
 			align-items: flex-start
 			justify-content: center
 			padding-bottom: 0
+
+			+r(576)
+				grid-template-columns: 1fr 1fr
 
 		&_product
 			display: flex

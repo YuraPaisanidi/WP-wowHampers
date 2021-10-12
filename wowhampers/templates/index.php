@@ -32,8 +32,8 @@ get_header();
 									<span class="hero__text_num"><?php echo $span; ?></span>
 								</div>
 								<div class="hero__btns">
-									<a href="#" class="hero__btns_view btn">View Hampers!</a>
-									<a href="#" class="hero__btns_view btn">Build WOW Box!</a>
+									<a href="<?php echo get_home_url(); ?>/shop" class="hero__btns_view btn">View Hampers!</a>
+									<a href="<?php echo get_home_url(); ?>/product/build-wow-box/" class="hero__btns_view btn">Build WOW Box!</a>
 								</div>
 							</div>
 
