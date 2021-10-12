@@ -79,7 +79,7 @@ add_filter('body_class', 'project_woocommerce_active_body_class');
  */
 function project_woocommerce_products_per_page()
 {
-	return 24;
+	return 6;
 }
 add_filter('loop_shop_per_page', 'project_woocommerce_products_per_page');
 

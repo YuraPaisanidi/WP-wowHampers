@@ -1436,6 +1436,44 @@
 		@extend .gifts__slide
 
 //--------------------Shop
+.columns-3
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-bottom: 55px
+
+.woocommerce
+
+	&-pagination
+
+		ul
+			display: flex
+			gap: 5px
+
+			li
+				width: 30px
+				height: 30px
+				display: flex
+				align-items: center
+				justify-content: center
+			
+			span, a
+				background: $dark
+				width: 100%
+				height: 100%
+				color: #fff
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 5px
+				border: 1px solid transparent
+
+			a
+				background: $accent
+
+				&:hover
+					border-color: #fff
+
 .shop
 	@extend .favorites
 
@@ -2499,6 +2537,106 @@
 
 	.flex-active
 		border: 1px solid #b7b7b7
+
+.product-type-composite
+	display: grid
+	grid-template-columns: 500px 1fr
+	
+	.product__img
+	// 	display: none
+		// max-width: 500px !important
+
+	.wp-post-image
+		max-width: 500px
+		width: 100%
+
+	.product__title
+		font-size: 30px
+
+	.page_button
+		color: $accent
+
+	.step_title, .step_index
+		font-size: 18px
+		color: $dark
+
+	.composite
+		&_form
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+
+			.component_inner
+				padding-bottom: 0 !important
+
+		&_data
+			width: 100%
+
+		&_wrap
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+
+			.quantity
+				display: none
+
+		&_price
+			font-family: $font2
+			color: $dark
+			font-size: 24px
+
+		&_add_to_cart_button
+			@extend .btn
+
+	.bundled
+
+		&_products
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 1fr
+			gap: 30px
+			align-items: flex-start
+			justify-content: center
+			padding-bottom: 0
+
+		&_product
+			display: flex
+			flex-direction: column
+			align-items: center
+			gap: 20px
+			padding-bottom: 5px
+
+			&_image
+				border-radius: 15px
+				overflow: hidden
+
+			.details
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				.cart
+					height: 50px
+
+			&_images
+				max-width: 200px
+
+			&_optional
+
+				&_checkbox
+
+					input
+						border: 1px solid $accent
+
+					input[type="checkbox"]:checked
+						background-color: $accent
+
+					.price
+						font-family: $font2
+						font-weight: 700
+						color: $dark
+						font-size: 18px
+
 // -----MODAL-----
 .modal
 	display: flex

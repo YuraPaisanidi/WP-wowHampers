@@ -91,3 +91,10 @@ function woocommerce_shop_item_btns() {
 
 	<?php
 }
+
+//--------------------------------Archive pagination-----------------
+// remove_action ('woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
+// add_action ('woocommerce_after_shop_loop', 'woocommerce_load_more', 10);
+
+
+// }
