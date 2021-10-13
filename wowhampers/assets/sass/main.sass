@@ -353,6 +353,7 @@
 					content: url(../img/triangle.svg)
 					position: absolute
 					right: 10px
+					top: 7%
 
 					+r(576)
 						display: none
@@ -368,12 +369,9 @@
 						visibility: visible
 						opacity: 1
 
-				ul
+				.header__btns_menu
 					position: absolute
 					top: 100%
-					// width: 200px
-					// min-height: 250px
-					// height: 20vh
 					display: flex
 					flex-direction: column
 					justify-content: space-between
@@ -1219,7 +1217,7 @@
 
 //-----------------Profile------------------
 .profile
-	padding: 120px 15px 50px 15px
+	padding: 20px 15px 50px 15px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -1228,7 +1226,7 @@
 		max-width: 1275px
 		width: 100%
 		display: grid
-		grid-template-columns: 360px 1fr
+		grid-template-columns: 285px 1fr
 		grid-gap: 20px
 
 		+r(1200)
@@ -1251,6 +1249,13 @@
 
 			li
 				width: 100%
+				list-style-type: none
+
+				&.is-active
+					a
+						background: $accent
+						color: #fff
+						text-decoration: none
 
 			a
 				display: flex
@@ -1262,14 +1267,14 @@
 				height: 50px
 				color: $dark
 				font-weight: 700
+				text-decoration: none
 
-				&.active
-					background: $accent
-					color: #fff
+
 
 				&:hover
 					background: $accent
 					color: #fff
+					text-decoration: none
 
 	&__content
 		padding: 30px 100px
@@ -1296,6 +1301,13 @@
 		&--order
 			background: #fff
 			padding: 0
+
+		.woocommerce-address-fields
+			display: flex
+			flex-direction: column
+
+		.input-text
+			@extend .profile__input
 
 	&__info
 		display: flex

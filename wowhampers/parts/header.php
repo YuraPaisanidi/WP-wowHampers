@@ -38,11 +38,18 @@
 
 			<div class="header__btns_item header__btns_item--profile">
 				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.svg" alt=""><span>adress@gmail.com</span></a>
-				<ul>
+				<!--<ul>
 					<li><a href="#">adress@gmail.com</a></li>
 					<li><a href="#">adress@gmail.com</a></li>
 					<li><a href="#">adress@gmail.com</a></li>
-				</ul>
+				</ul> -->
+				<?php 
+					wp_nav_menu( array(
+						'menu'=>'profile',
+						'menu_class'=>'header__btns_menu',
+						'theme_location'=>'menu',
+						) );
+					?>
 			</div>
 
 		</div>
