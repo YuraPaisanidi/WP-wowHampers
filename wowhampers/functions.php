@@ -31,6 +31,11 @@ require get_template_directory() . '/includes/pagination.php';
  */
 require get_template_directory() . '/includes/post-type.php';
 
+/**
+ * Implement pagination
+ */
+require get_template_directory() . '/includes/mini-cart.php';
+
 
 /**
  * Load WooCommerce compatibility file.

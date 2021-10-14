@@ -323,7 +323,8 @@
 				background: $accent
 				color: #fff
 				width: 15px
-				height: 15px
+				height: auto
+				line-height: 15px
 				display: flex
 				align-items: center
 				justify-content: center
@@ -373,6 +374,7 @@
 				.header__btns_menu
 					position: absolute
 					top: 100%
+					right: 0
 					display: flex
 					flex-direction: column
 					justify-content: space-between
@@ -448,6 +450,7 @@
 		padding-left: 315px
 		gap: 30px
 		border-radius: 15px
+		overflow: hidden
 
 		+r(1700)
 			height: 600px
@@ -800,9 +803,10 @@
 
 	&__slider
 		margin-bottom: 40px
+		width: 100%
 
 	&__wrapper
-		max-width: 100vw
+		// max-width: 100vw
 
 	&__nav
 		display: flex
@@ -818,6 +822,7 @@
 		padding-top: 10px
 		padding-bottom: 15px
 		height: 100%
+		overflow: hidden
 		+transition
 
 		+r(480)
@@ -856,17 +861,29 @@
 			margin-left: 20px
 			margin-bottom: 10px
 
-		&_img
-			max-width: 385px
-			max-height: 385px
+		&_top
+			width: 100%
+
+		&_img, .woocommerce-loop-product__link
+			width: 100%
+			padding-top: 100%
+			// max-width: 385px
+			// max-height: 385px
+			// height: 385px
 			border-radius: 15px
 			margin-bottom: 20px
 			overflow: hidden
+			position: relative
 			+transition
 
 			img
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
 				object-fit: cover
-				width: 100%
+				min-width: 100%
+				height: 100%
 
 		&_price
 			font-family: $font2
@@ -1527,6 +1544,8 @@
 	flex-direction: column
 	align-items: center
 	padding-bottom: 55px
+	max-width: 1200px
+	width: 100%
 
 .woocommerce
 
@@ -2442,6 +2461,7 @@
 	&__container
 		max-width: 1230px
 		padding: 0 15px
+		width: 100%
 		margin: 0 auto
 
 	&__item
@@ -3593,11 +3613,13 @@
 
 	.favorites__wrap
 		@extend .swiper-wrapper
-		@extend .gifts__wrapper
+		// @extend .gifts__wrapper
+		grid-gap: 0
+
+
 
 	.woocommerce
-		img
-			// height: 100%
+		padding: 0 15px
 
 // ----- WP nav -----
 .customize-support
@@ -3612,17 +3634,17 @@
 			position: fixed
 
 .woocommerce-notices-wrapper
-	display: none
-	// position: absolute
-	// top: 7%
-	// left: 50%
-	// right: 0
-	// max-width: 590px
-	// transform: translate(-50%, 5px)
+	// display: none
+	position: absolute
+	top: 7%
+	left: 50%
+	right: 0
+	max-width: 590px
+	transform: translate(-50%, 5px)
 
-	// .woocommerce-error
-	// 	li
-	// 		padding-left: 15px !important
+	.woocommerce-error
+		li
+			padding-left: 15px !important
 
 .pagination
 	display: flex
@@ -3643,3 +3665,8 @@
 	
 	span
 		background: $dark
+
+.tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-custom img,
+a.wishlist_products_counter.top_wishlist-custom img,
+span.wishlist_products_counter.top_wishlist-custom img
+	margin: 0 !important

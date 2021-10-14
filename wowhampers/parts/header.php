@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="header__btns_item">
-				<a href="<?php echo get_home_url(); ?>/cart"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.svg" alt=""></a>
+				<?php cart_link(); ?><?php the_widget('WC_Widget_Cart', 'title='); ?>
 			</div>
 
 			<div class="header__btns_item header__btns_item--profile">

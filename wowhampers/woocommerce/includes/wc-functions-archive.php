@@ -11,21 +11,6 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices',
 
 
 //---------------------------------Archive item----------------------------
-	add_action ( 'woocommerce_before_shop_loop_item', 'woocommerce_shop_wrap_top_start' );
-	function woocommerce_shop_wrap_top_start(){
-		?>
-			<div class="gifts__slide_top">
-
-		<?php
-	}
-
-	add_action ('woocommerce_before_shop_loop_item_title', 'woocommerce_shop_wrap_top_end', 15);
-	function woocommerce_shop_wrap_top_end(){
-		?>
-			</div>
-
-		<?php
-	}
 
 	add_action ('woocommerce_shop_loop_item_title', 'woocommerce_shop_wrap_bottom_start', 5);
 	function woocommerce_shop_wrap_bottom_start(){
@@ -52,9 +37,7 @@ add_action ( 'woocommerce_before_shop_loop_item_title', 'woocommerce_shop_item_i
 function woocommerce_shop_item_image() {
 	?>
 
-	<div class="gifts__slide_img">
 		<?php the_post_thumbnail(); ?>
-	</div>
 	<?php
 }
 
