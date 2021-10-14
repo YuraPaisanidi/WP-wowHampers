@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="header__btns_item header__btns_item--profile">
-				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.svg" alt=""><span>adress@gmail.com</span></a>
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.svg" alt=""><span></span></a>
 				<?php 
 					wp_nav_menu( array(
 						'menu'=>'profile',

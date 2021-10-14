@@ -1,0 +1,4 @@
+FTP:
+Host: ftp.wowhamper.com.au
+User: developer@wowhamper.com.au
+Password: ji&HNAW%WKn^

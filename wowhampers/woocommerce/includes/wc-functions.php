@@ -8,3 +8,4 @@ require get_template_directory() . '/woocommerce/includes/wc-functions-archive.p
 require get_template_directory() . '/woocommerce/includes/wc-functions-account.php';
 
 
+
