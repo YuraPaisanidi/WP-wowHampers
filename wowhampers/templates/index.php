@@ -125,7 +125,7 @@ get_header();
 					<p>Add a message & we ship WOW right to the door!</p>
 				</li>
 			</ul>
-			<a href="#" class="steps__btn btn">Build WOW box!</a>
+			<a href="<?php echo get_home_url(); ?>/product/build-wow-box/" class="steps__btn btn">Build WOW box!</a>
 		</div>
 	</div>
 </section>
@@ -144,19 +144,19 @@ get_header();
 			modern gifts , all designed to inspire happiness. 
 		</p>
 		<div class="categories__wrap">
-			<a href="#" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=24" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-1.png" alt="">
 				</div>
 				<span>For Her</span>
 			</a>
-			<a href="#" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=25" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-2.png" alt="">
 				</div>
 				<span>Party Hampers</span>
 			</a>
-			<a href="#" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=26" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-3.png" alt="">
 				</div>

@@ -31,7 +31,7 @@ get_header();
 			</div>
 		<?php endif; ?>
 
-		<a href="#" class="blog__btn btn">See More</a>
+		<?php wptuts_pagination(); ?>
 
 	</div>
 </section>

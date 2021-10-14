@@ -2051,6 +2051,36 @@
 						stroke: $title
 						+transition
 
+#caldera_form_1
+	width: 100%
+	padding-top: 200px
+
+
+.CF61677736c940c
+	z-index: 1 !important
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.29) !important 
+	width: 100% !important
+	max-width: 500px !important
+	height: auto !important
+	padding: 50px !important
+	border: 1px solid #8d8d8e !important
+	margin: auto !important
+	transform: translate(0, -150px)
+	background: $bg2
+	border-radius: 15px
+	max-width: 590px
+	+transition
+
+	&::after
+		border-radius: 20px
+
+	+r(992)
+		max-width: 90vw
+		padding: 40px
+
+	+r(576)
+		padding: 25px
+
 //----------------Corporate-gifts-----------
 .corporate
 	@extend .favorites
@@ -2615,6 +2645,35 @@
 
 		.single_variation_wrap
 			width: 100%
+
+	.variations
+
+		tr
+			display: flex
+			flex-direction: column
+			align-items: center
+			gap: 10px
+
+		.woo-selected-variation-item-name
+			display: none
+
+		.reset_variations
+			display: none
+
+		.image-variable-wrapper
+			display: flex
+			gap: 15px
+
+		.variable-item
+			width: auto !important
+			height: auto !important
+			border-radius: 100%
+			border: 3px solid transparent
+
+			&.selected
+				border: 3px solid $accent
+
+
 
 	&__related
 
@@ -3538,6 +3597,7 @@
 
 	.woocommerce
 		img
+			// height: 100%
 
 // ----- WP nav -----
 .customize-support
@@ -3552,13 +3612,34 @@
 			position: fixed
 
 .woocommerce-notices-wrapper
-	position: absolute
-	top: 7%
-	left: 50%
-	right: 0
-	max-width: 590px
-	transform: translate(-50%, 5px)
+	display: none
+	// position: absolute
+	// top: 7%
+	// left: 50%
+	// right: 0
+	// max-width: 590px
+	// transform: translate(-50%, 5px)
 
-	.woocommerce-error
-		li
-			padding-left: 15px !important
+	// .woocommerce-error
+	// 	li
+	// 		padding-left: 15px !important
+
+.pagination
+	display: flex
+	gap: 5px
+
+	span, a
+		width: 30px
+		height: 30px
+		color: #fff
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 5px
+		border: 1px solid transparent
+
+	a
+		background: $accent
+	
+	span
+		background: $dark
