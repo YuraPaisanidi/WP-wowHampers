@@ -19,4 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="favorites__wrap">
+<div class="favorites__wrap swiper-wrapper">

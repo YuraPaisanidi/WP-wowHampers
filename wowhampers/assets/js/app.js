@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 
 	//----------------------Slider-gifts--------------
-	const swiper = new Swiper(".gifts__slider", {
+	const swiper = new Swiper(".gifts__slider .woocommerce", {
 		slidesPerView: 1,
 		spaceBetween: 20,
 		// loop: true,

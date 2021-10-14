@@ -19,3 +19,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
   }
   add_action( 'wp_enqueue_scripts', 'ewa_scripts' );
+
+
+//------------------стили админка ----------------------
+add_action('admin_head', 'moi_novii_style');
+function moi_novii_style() {
+print '<style>
+	/*Стили в админку*/
+		.editor-block-list__block {
+			max-width: 100%;
+		}
+		.wp-block {
+			max-width: 100%;
+		}
+</style>';
+}
