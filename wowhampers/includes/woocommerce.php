@@ -321,3 +321,11 @@ if (!function_exists('project_woocommerce_wrapper_before')) {
 
 		wp_die();
 	}
+
+	// remove zero in the prices
+add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
+function wc_hide_trailing_zeros( $trim ) {
+
+return true;
+
+}

@@ -27,7 +27,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 	<form method="post" class="profile__content">
 
-		<p class="profile__content_title">Change Your Password</p>
+		<p class="profile__content_title">Shipping address</p>
 
 		<div class="woocommerce-address-fields">
 			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
