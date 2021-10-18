@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `wowhampers`
@@ -29,19 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `wp_actionscheduler_actions` (
   `action_id` bigint UNSIGNED NOT NULL,
-  `hook` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `hook` varchar(191) COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(20) COLLATE utf8_general_ci NOT NULL,
   `scheduled_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `scheduled_date_local` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `args` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `schedule` longtext COLLATE utf8mb4_unicode_520_ci,
+  `args` varchar(191) COLLATE utf8_general_ci DEFAULT NULL,
+  `schedule` longtext COLLATE utf8_general_ci,
   `group_id` bigint UNSIGNED NOT NULL DEFAULT '0',
   `attempts` int NOT NULL DEFAULT '0',
   `last_attempt_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `last_attempt_local` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `claim_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `extended_args` varchar(8000) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `extended_args` varchar(8000) COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_actionscheduler_actions`
@@ -119,7 +119,7 @@ INSERT INTO `wp_actionscheduler_actions` (`action_id`, `hook`, `status`, `schedu
 CREATE TABLE `wp_actionscheduler_claims` (
   `claim_id` bigint UNSIGNED NOT NULL,
   `date_created_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -129,8 +129,8 @@ CREATE TABLE `wp_actionscheduler_claims` (
 
 CREATE TABLE `wp_actionscheduler_groups` (
   `group_id` bigint UNSIGNED NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `slug` varchar(255) COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_actionscheduler_groups`
@@ -150,10 +150,10 @@ INSERT INTO `wp_actionscheduler_groups` (`group_id`, `slug`) VALUES
 CREATE TABLE `wp_actionscheduler_logs` (
   `log_id` bigint UNSIGNED NOT NULL,
   `action_id` bigint UNSIGNED NOT NULL,
-  `message` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `message` text COLLATE utf8_general_ci NOT NULL,
   `log_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `log_date_local` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_actionscheduler_logs`
@@ -356,7 +356,7 @@ CREATE TABLE `wp_alm` (
   `repeaterDefault` longtext NOT NULL,
   `repeaterType` text NOT NULL,
   `pluginVersion` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_alm`
@@ -372,9 +372,9 @@ INSERT INTO `wp_alm` (`id`, `name`, `repeaterDefault`, `repeaterType`, `pluginVe
 --
 
 CREATE TABLE `wp_aws_cache` (
-  `name` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `name` varchar(100) COLLATE utf8_general_ci NOT NULL,
+  `value` longtext COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_aws_cache`
@@ -397,16 +397,16 @@ INSERT INTO `wp_aws_cache` (`name`, `value`) VALUES
 
 CREATE TABLE `wp_aws_index` (
   `id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `term` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '0',
-  `term_source` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '0',
-  `type` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '0',
+  `term` varchar(50) COLLATE utf8_general_ci NOT NULL DEFAULT '0',
+  `term_source` varchar(50) COLLATE utf8_general_ci NOT NULL DEFAULT '0',
+  `type` varchar(50) COLLATE utf8_general_ci NOT NULL DEFAULT '0',
   `count` bigint UNSIGNED NOT NULL DEFAULT '0',
   `in_stock` int NOT NULL DEFAULT '0',
   `on_sale` int NOT NULL DEFAULT '0',
   `term_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `visibility` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '0',
-  `lang` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `visibility` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '0',
+  `lang` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_aws_index`
@@ -776,9 +776,9 @@ INSERT INTO `wp_aws_index` (`id`, `term`, `term_source`, `type`, `count`, `in_st
 CREATE TABLE `wp_berocket_termmeta` (
   `meta_id` bigint NOT NULL,
   `berocket_term_id` bigint NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -788,10 +788,10 @@ CREATE TABLE `wp_berocket_termmeta` (
 
 CREATE TABLE `wp_cf_forms` (
   `id` int UNSIGNED NOT NULL,
-  `form_id` varchar(18) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `type` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `config` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `form_id` varchar(18) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `type` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `config` longtext COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_cf_forms`
@@ -822,11 +822,11 @@ INSERT INTO `wp_cf_forms` (`id`, `form_id`, `type`, `config`) VALUES
 
 CREATE TABLE `wp_cf_form_entries` (
   `id` int UNSIGNED NOT NULL,
-  `form_id` varchar(18) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `form_id` varchar(18) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `user_id` int NOT NULL,
   `datestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'active'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_cf_form_entries`
@@ -845,10 +845,10 @@ INSERT INTO `wp_cf_form_entries` (`id`, `form_id`, `user_id`, `datestamp`, `stat
 CREATE TABLE `wp_cf_form_entry_meta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `entry_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `process_id` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `process_id` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -859,10 +859,10 @@ CREATE TABLE `wp_cf_form_entry_meta` (
 CREATE TABLE `wp_cf_form_entry_values` (
   `id` int UNSIGNED NOT NULL,
   `entry_id` int NOT NULL,
-  `field_id` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `field_id` varchar(20) COLLATE utf8_general_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `value` longtext COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_cf_form_entry_values`
@@ -900,9 +900,9 @@ CREATE TABLE `wp_cf_pro_messages` (
   `ID` bigint UNSIGNED NOT NULL,
   `cfp_id` bigint UNSIGNED DEFAULT NULL,
   `entry_id` bigint UNSIGNED DEFAULT NULL,
-  `hash` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `hash` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -912,10 +912,10 @@ CREATE TABLE `wp_cf_pro_messages` (
 
 CREATE TABLE `wp_cf_queue_failures` (
   `id` bigint NOT NULL,
-  `job` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `error` text COLLATE utf8mb4_unicode_520_ci,
+  `job` longtext COLLATE utf8_general_ci NOT NULL,
+  `error` text COLLATE utf8_general_ci,
   `failed_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -925,12 +925,12 @@ CREATE TABLE `wp_cf_queue_failures` (
 
 CREATE TABLE `wp_cf_queue_jobs` (
   `id` bigint NOT NULL,
-  `job` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `job` longtext COLLATE utf8_general_ci NOT NULL,
   `attempts` tinyint NOT NULL DEFAULT '0',
   `reserved_at` datetime DEFAULT NULL,
   `available_at` datetime NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -941,9 +941,9 @@ CREATE TABLE `wp_cf_queue_jobs` (
 CREATE TABLE `wp_commentmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `comment_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -954,20 +954,20 @@ CREATE TABLE `wp_commentmeta` (
 CREATE TABLE `wp_comments` (
   `comment_ID` bigint UNSIGNED NOT NULL,
   `comment_post_ID` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `comment_author` tinytext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `comment_author` tinytext COLLATE utf8_general_ci NOT NULL,
+  `comment_author_email` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_author_url` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_author_IP` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_content` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `comment_content` text COLLATE utf8_general_ci NOT NULL,
   `comment_karma` int NOT NULL DEFAULT '0',
-  `comment_approved` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '1',
-  `comment_agent` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'comment',
+  `comment_approved` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '1',
+  `comment_agent` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `comment_type` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'comment',
   `comment_parent` bigint UNSIGNED NOT NULL DEFAULT '0',
   `user_id` bigint UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_comments`
@@ -984,19 +984,19 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 
 CREATE TABLE `wp_links` (
   `link_id` bigint UNSIGNED NOT NULL,
-  `link_url` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_image` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_target` varchar(25) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_description` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_visible` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'Y',
+  `link_url` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_name` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_image` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_target` varchar(25) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_description` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_visible` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'Y',
   `link_owner` bigint UNSIGNED NOT NULL DEFAULT '1',
   `link_rating` int NOT NULL DEFAULT '0',
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `link_rel` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_notes` mediumtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `link_rss` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `link_rel` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `link_notes` mediumtext COLLATE utf8_general_ci NOT NULL,
+  `link_rss` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -1006,10 +1006,10 @@ CREATE TABLE `wp_links` (
 
 CREATE TABLE `wp_options` (
   `option_id` bigint UNSIGNED NOT NULL,
-  `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `option_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `option_name` varchar(191) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `option_value` longtext COLLATE utf8_general_ci NOT NULL,
+  `autoload` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'yes'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_options`
@@ -1374,7 +1374,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (1318, 'berocket_framework_option_global', 'a:3:{s:28:\"fontawesome_frontend_disable\";s:0:\"\";s:28:\"fontawesome_frontend_version\";s:0:\"\";s:27:\"framework_products_per_page\";s:1:\"6\";}', 'yes'),
 (1319, 'BeRocket_Framework_plugins_version_check', 'a:2:{s:12:\"ajax_filters\";s:5:\"1.5.6\";s:12:\"BeRocket_LMP\";s:7:\"1.1.9.2\";}', 'yes'),
 (1320, 'berocket_admin_notices', 'a:1:{i:20;a:1:{i:0;a:1:{i:0;a:1:{s:9:\"subscribe\";a:15:{s:5:\"start\";i:0;s:3:\"end\";i:0;s:4:\"name\";s:9:\"subscribe\";s:4:\"html\";s:136:\"Subscribe to get latest BeRocket news and updates, plugin recommendations and configuration help, promotional email with discount codes.\";s:9:\"righthtml\";s:43:\"<a class=\"berocket_no_thanks\">No thanks</a>\";s:10:\"rightwidth\";i:80;s:13:\"nothankswidth\";i:60;s:12:\"contentwidth\";i:400;s:9:\"subscribe\";b:1;s:6:\"closed\";s:1:\"0\";s:8:\"priority\";i:20;s:6:\"height\";i:50;s:6:\"repeat\";b:0;s:11:\"repeatcount\";i:1;s:5:\"image\";a:4:{s:5:\"local\";s:120:\"http://wowhampers/wp-content/plugins/woocommerce-ajax-filters/berocket/includes/../assets/images/ad_white_on_orange.webp\";s:5:\"width\";i:239;s:6:\"height\";i:118;s:5:\"scale\";d:0.423728813559322;}}}}}}', 'yes'),
-(1321, 'berocket_plugin_error_1', 'a:7:{i:0;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:629:\"CREATE TABLE wp_braapf_term_taxonomy_hierarchical (\r\n        term_taxonomy_id bigint(20) NOT NULL,\r\n        term_id bigint(20) NOT NULL,\r\n        term_taxonomy_child_id bigint(20) NOT NULL,\r\n        term_child_id bigint(20) NOT NULL,\r\n        taxonomy varchar(32) NOT NULL,\r\n        INDEX term_taxonomy_id (term_taxonomy_id),\r\n        INDEX term_taxonomy_child_id (term_taxonomy_child_id),\r\n        INDEX child_parent_id (term_taxonomy_id, term_taxonomy_child_id),\r\n        UNIQUE uniqueid (term_taxonomy_id, term_id, term_taxonomy_child_id, term_child_id)\r\n        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;\";s:5:\"error\";a:1:{s:36:\"wp_braapf_term_taxonomy_hierarchical\";s:50:\"Created table wp_braapf_term_taxonomy_hierarchical\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:1;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:312:\"CREATE TABLE wp_braapf_product_stock_status_parent (\r\n        post_id bigint(20) NOT NULL,\r\n        parent_id bigint(20) NOT NULL,\r\n        stock_status tinyint(2),\r\n        PRIMARY KEY (post_id),\r\n        INDEX stock_status (stock_status)\r\n        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;\";s:5:\"error\";a:1:{s:37:\"wp_braapf_product_stock_status_parent\";s:51:\"Created table wp_braapf_product_stock_status_parent\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:2;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:464:\"CREATE TABLE wp_braapf_product_variation_attributes (\r\n        post_id bigint(20) NOT NULL,\r\n        parent_id bigint(20) NOT NULL,\r\n        meta_key varchar(32) NOT NULL,\r\n        meta_value_id bigint(20) NOT NULL,\r\n        INDEX post_id (post_id),\r\n        INDEX meta_key (meta_key),\r\n        INDEX meta_value_id (meta_value_id),\r\n        UNIQUE uniqueid (post_id, meta_key, meta_value_id)\r\n        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;\";s:5:\"error\";a:1:{s:38:\"wp_braapf_product_variation_attributes\";s:52:\"Created table wp_braapf_product_variation_attributes\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:3;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:311:\"CREATE TABLE wp_braapf_variation_attributes (\r\n        post_id bigint(20) NOT NULL,\r\n        taxonomy varchar(32) NOT NULL,\r\n        INDEX post_id (post_id),\r\n        INDEX taxonomy (taxonomy),\r\n        UNIQUE uniqueid (post_id, taxonomy)\r\n        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;\";s:5:\"error\";a:1:{s:30:\"wp_braapf_variation_attributes\";s:44:\"Created table wp_braapf_variation_attributes\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:4;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:136:\"SELECT MIN(wp_wc_product_meta_lookup.product_id) as min, MAX(wp_wc_product_meta_lookup.product_id) as max FROM wp_wc_product_meta_lookup\";s:5:\"error\";O:8:\"stdClass\":2:{s:3:\"min\";s:3:\"129\";s:3:\"max\";s:3:\"145\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:5;a:3:{s:7:\"message\";s:47:\"insert_table_braapf_product_stock_status_parent\";s:4:\"data\";a:2:{s:8:\"start_id\";i:129;s:6:\"end_id\";i:5129;}s:4:\"time\";i:1633970355;}i:6;a:3:{s:7:\"message\";s:52:\"insert_table_braapf_product_stock_status_parent test\";s:4:\"data\";a:5:{s:8:\"start_id\";i:129;s:6:\"end_id\";i:5129;s:6:\"min_id\";i:129;s:6:\"max_id\";i:145;s:6:\"result\";O:8:\"stdClass\":3:{s:7:\"post_id\";s:3:\"129\";s:9:\"parent_id\";s:1:\"0\";s:12:\"stock_status\";s:1:\"1\";}}s:4:\"time\";i:1633970355;}}', 'no'),
+(1321, 'berocket_plugin_error_1', 'a:7:{i:0;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:629:\"CREATE TABLE wp_braapf_term_taxonomy_hierarchical (\r\n        term_taxonomy_id bigint(20) NOT NULL,\r\n        term_id bigint(20) NOT NULL,\r\n        term_taxonomy_child_id bigint(20) NOT NULL,\r\n        term_child_id bigint(20) NOT NULL,\r\n        taxonomy varchar(32) NOT NULL,\r\n        INDEX term_taxonomy_id (term_taxonomy_id),\r\n        INDEX term_taxonomy_child_id (term_taxonomy_child_id),\r\n        INDEX child_parent_id (term_taxonomy_id, term_taxonomy_child_id),\r\n        UNIQUE uniqueid (term_taxonomy_id, term_id, term_taxonomy_child_id, term_child_id)\r\n        ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\";s:5:\"error\";a:1:{s:36:\"wp_braapf_term_taxonomy_hierarchical\";s:50:\"Created table wp_braapf_term_taxonomy_hierarchical\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:1;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:312:\"CREATE TABLE wp_braapf_product_stock_status_parent (\r\n        post_id bigint(20) NOT NULL,\r\n        parent_id bigint(20) NOT NULL,\r\n        stock_status tinyint(2),\r\n        PRIMARY KEY (post_id),\r\n        INDEX stock_status (stock_status)\r\n        ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\";s:5:\"error\";a:1:{s:37:\"wp_braapf_product_stock_status_parent\";s:51:\"Created table wp_braapf_product_stock_status_parent\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:2;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:464:\"CREATE TABLE wp_braapf_product_variation_attributes (\r\n        post_id bigint(20) NOT NULL,\r\n        parent_id bigint(20) NOT NULL,\r\n        meta_key varchar(32) NOT NULL,\r\n        meta_value_id bigint(20) NOT NULL,\r\n        INDEX post_id (post_id),\r\n        INDEX meta_key (meta_key),\r\n        INDEX meta_value_id (meta_value_id),\r\n        UNIQUE uniqueid (post_id, meta_key, meta_value_id)\r\n        ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\";s:5:\"error\";a:1:{s:38:\"wp_braapf_product_variation_attributes\";s:52:\"Created table wp_braapf_product_variation_attributes\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:3;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:311:\"CREATE TABLE wp_braapf_variation_attributes (\r\n        post_id bigint(20) NOT NULL,\r\n        taxonomy varchar(32) NOT NULL,\r\n        INDEX post_id (post_id),\r\n        INDEX taxonomy (taxonomy),\r\n        UNIQUE uniqueid (post_id, taxonomy)\r\n        ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\";s:5:\"error\";a:1:{s:30:\"wp_braapf_variation_attributes\";s:44:\"Created table wp_braapf_variation_attributes\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:4;a:3:{s:7:\"message\";s:28:\"Additional tables generation\";s:4:\"data\";a:3:{s:5:\"query\";s:136:\"SELECT MIN(wp_wc_product_meta_lookup.product_id) as min, MAX(wp_wc_product_meta_lookup.product_id) as max FROM wp_wc_product_meta_lookup\";s:5:\"error\";O:8:\"stdClass\":2:{s:3:\"min\";s:3:\"129\";s:3:\"max\";s:3:\"145\";}s:4:\"cron\";s:7:\"ENABLED\";}s:4:\"time\";i:1633970355;}i:5;a:3:{s:7:\"message\";s:47:\"insert_table_braapf_product_stock_status_parent\";s:4:\"data\";a:2:{s:8:\"start_id\";i:129;s:6:\"end_id\";i:5129;}s:4:\"time\";i:1633970355;}i:6;a:3:{s:7:\"message\";s:52:\"insert_table_braapf_product_stock_status_parent test\";s:4:\"data\";a:5:{s:8:\"start_id\";i:129;s:6:\"end_id\";i:5129;s:6:\"min_id\";i:129;s:6:\"max_id\";i:145;s:6:\"result\";O:8:\"stdClass\":3:{s:7:\"post_id\";s:3:\"129\";s:9:\"parent_id\";s:1:\"0\";s:12:\"stock_status\";s:1:\"1\";}}s:4:\"time\";i:1633970355;}}', 'no'),
 (1323, '_transient_timeout_berocket_1_paid_info', '1634564361', 'no'),
 (1324, '_transient_berocket_1_paid_info', 'a:13:{s:2:\"id\";s:1:\"1\";s:4:\"name\";s:32:\"WooCommerce AJAX Products Filter\";s:4:\"slug\";s:32:\"woocommerce-ajax-products-filter\";s:10:\"plugin_url\";s:61:\"https://berocket.com/product/woocommerce-ajax-products-filter\";s:7:\"version\";s:5:\"3.0.5\";s:5:\"about\";s:113:\"Take a look at this fantastic AJAX products filter plugin for WooCommerce. Add unlimited filters with one widget.\";s:10:\"difference\";a:25:{i:0;s:33:\"Widget to filter by Modified Date\";i:1;s:56:\"Up to 4 colors for Attribute values in Type color Widget\";i:2;s:148:\"Custom Sidebar for filters <a href=\'https://woocommerce-products-filter.berocket.com/woocommerce-products-filter-demo-2/\' target=\'_blank\'>[demo]</a>\";i:3;s:133:\"Filters over products <a href=\'https://woocommerce-products-filter.berocket.com/product-category/tshirts/\' target=\'_blank\'>[demo]</a>\";i:4;s:135:\"Show Filter Titles only <a href=\'https://woocommerce-products-filter.berocket.com/product-category/tshirts/\' target=\'_blank\'>[demo]</a>\";i:5;s:148:\"Collapsed filters over products <a href=\'https://woocommerce-products-filter.berocket.com/product-category/all-products/\' target=\'_blank\'>[demo]</a>\";i:6;s:143:\"SEO Meta and Title <a href=\'https://woocommerce-products-filter.berocket.com/shop/filters/price/465_1913/color/red/\' target=\'_blank\'>[demo]</a>\";i:7;s:28:\"Filters by Custom Taxonomies\";i:8;s:22:\"Filter by Stock Status\";i:9;s:32:\"Filter by Product On Sale Status\";i:10;s:36:\"Remove/Leave only some filter values\";i:11;s:46:\"Checkbox/Values List for Price as Price Ranges\";i:12;s:45:\"Slider Range for Attributes/Custom Taxonomies\";i:13;s:31:\"Datepicker Style for Attributes\";i:14;s:39:\"Datepicker for Product Publication Date\";i:15;s:42:\"Display Product Count for Attribute Values\";i:16;s:34:\"Display 1-4 filter(s) per Line/Row\";i:17;s:80:\"Search Box Block (a group of filters that redirects to other pages on filtering)\";i:18;s:31:\"Nice URLs for SEO Friendly URLs\";i:19;s:28:\" Links Setup after filtering\";i:20;s:35:\"Generate Canonical Links for a page\";i:21;s:44:\"Add Filters to Page Title/Description/Header\";i:22;s:63:\"Display Variation Image/Price that matches the selected filters\";i:23;s:72:\"Open a product with Selected Variation that matches the selected filters\";i:24;s:24:\"Additional Filter Styles\";}s:7:\"related\";a:3:{i:0;s:1:\"3\";i:1;s:2:\"18\";i:2;s:2:\"21\";}s:5:\"image\";s:61:\"https://berocket.com/img/b15144f7012aa6e6badd844905dec34f.png\";s:10:\"mini_image\";s:61:\"https://berocket.com/img/fef38793de09251e3d7dd4520965cc16.png\";s:10:\"shop_image\";s:61:\"https://berocket.com/img/163ffebae875ac349d4430b2e388ca99.png\";s:5:\"price\";s:2:\"44\";s:7:\"buy_url\";s:34:\"https://berocket.com/add_to_cart/1\";}', 'no'),
 (1325, 'berocket_current_displayed_notice', 'a:15:{s:5:\"start\";i:0;s:3:\"end\";i:0;s:4:\"name\";s:9:\"subscribe\";s:4:\"html\";s:136:\"Subscribe to get latest BeRocket news and updates, plugin recommendations and configuration help, promotional email with discount codes.\";s:9:\"righthtml\";s:43:\"<a class=\"berocket_no_thanks\">No thanks</a>\";s:10:\"rightwidth\";i:80;s:13:\"nothankswidth\";i:60;s:12:\"contentwidth\";i:400;s:9:\"subscribe\";b:1;s:6:\"closed\";s:1:\"0\";s:8:\"priority\";i:20;s:6:\"height\";i:50;s:6:\"repeat\";b:0;s:11:\"repeatcount\";i:1;s:5:\"image\";a:4:{s:5:\"local\";s:120:\"http://wowhampers/wp-content/plugins/woocommerce-ajax-filters/berocket/includes/../assets/images/ad_white_on_orange.webp\";s:5:\"width\";i:239;s:6:\"height\";i:118;s:5:\"scale\";d:0.423728813559322;}}', 'yes'),
@@ -1711,9 +1711,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 CREATE TABLE `wp_postmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `post_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -3816,26 +3816,26 @@ CREATE TABLE `wp_posts` (
   `post_author` bigint UNSIGNED NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_excerpt` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'publish',
-  `comment_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'open',
-  `ping_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'open',
-  `post_password` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `post_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `to_ping` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `pinged` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `post_content` longtext COLLATE utf8_general_ci NOT NULL,
+  `post_title` text COLLATE utf8_general_ci NOT NULL,
+  `post_excerpt` text COLLATE utf8_general_ci NOT NULL,
+  `post_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'publish',
+  `comment_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'open',
+  `ping_status` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'open',
+  `post_password` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `post_name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `to_ping` text COLLATE utf8_general_ci NOT NULL,
+  `pinged` text COLLATE utf8_general_ci NOT NULL,
   `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content_filtered` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `post_content_filtered` longtext COLLATE utf8_general_ci NOT NULL,
   `post_parent` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `guid` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `guid` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `menu_order` int NOT NULL DEFAULT '0',
-  `post_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'post',
-  `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `post_type` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT 'post',
+  `post_mime_type` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `comment_count` bigint NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_posts`
@@ -4048,9 +4048,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 CREATE TABLE `wp_termmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `term_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_termmeta`
@@ -4087,10 +4087,10 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 
 CREATE TABLE `wp_terms` (
   `term_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `slug` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `slug` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `term_group` bigint NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_terms`
@@ -4136,7 +4136,7 @@ CREATE TABLE `wp_term_relationships` (
   `object_id` bigint UNSIGNED NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint UNSIGNED NOT NULL DEFAULT '0',
   `term_order` int NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_term_relationships`
@@ -4251,11 +4251,11 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 CREATE TABLE `wp_term_taxonomy` (
   `term_taxonomy_id` bigint UNSIGNED NOT NULL,
   `term_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `description` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `taxonomy` varchar(32) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `description` longtext COLLATE utf8_general_ci NOT NULL,
   `parent` bigint UNSIGNED NOT NULL DEFAULT '0',
   `count` bigint NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_term_taxonomy`
@@ -4379,9 +4379,9 @@ INSERT INTO `wp_tinvwl_lists` (`ID`, `author`, `date`, `title`, `status`, `type`
 CREATE TABLE `wp_um_metadata` (
   `umeta_id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `um_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `um_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `um_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `um_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -4392,9 +4392,9 @@ CREATE TABLE `wp_um_metadata` (
 CREATE TABLE `wp_usermeta` (
   `umeta_id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -4851,16 +4851,16 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 
 CREATE TABLE `wp_users` (
   `ID` bigint UNSIGNED NOT NULL,
-  `user_login` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_pass` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_nicename` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_url` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_login` varchar(60) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_pass` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_nicename` varchar(50) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_email` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_url` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_activation_key` varchar(255) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `user_status` int NOT NULL DEFAULT '0',
-  `display_name` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `display_name` varchar(250) COLLATE utf8_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_users`
@@ -4899,10 +4899,10 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 
 CREATE TABLE `wp_user_registration_sessions` (
   `session_id` bigint UNSIGNED NOT NULL,
-  `session_key` char(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `session_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `session_key` char(32) COLLATE utf8_general_ci NOT NULL,
+  `session_value` longtext COLLATE utf8_general_ci NOT NULL,
   `session_expiry` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -4912,22 +4912,22 @@ CREATE TABLE `wp_user_registration_sessions` (
 
 CREATE TABLE `wp_wc_admin_notes` (
   `note_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `locale` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `title` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `content_data` longtext COLLATE utf8mb4_unicode_520_ci,
-  `status` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `source` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `type` varchar(20) COLLATE utf8_general_ci NOT NULL,
+  `locale` varchar(20) COLLATE utf8_general_ci NOT NULL,
+  `title` longtext COLLATE utf8_general_ci NOT NULL,
+  `content` longtext COLLATE utf8_general_ci NOT NULL,
+  `content_data` longtext COLLATE utf8_general_ci,
+  `status` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `source` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_reminder` datetime DEFAULT NULL,
   `is_snoozable` tinyint(1) NOT NULL DEFAULT '0',
-  `layout` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `image` varchar(200) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `layout` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `image` varchar(200) COLLATE utf8_general_ci DEFAULT NULL,
   `is_deleted` tinyint(1) NOT NULL DEFAULT '0',
-  `icon` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'info'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `icon` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT 'info'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_wc_admin_notes`
@@ -4957,15 +4957,15 @@ INSERT INTO `wp_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, `
 CREATE TABLE `wp_wc_admin_note_actions` (
   `action_id` bigint UNSIGNED NOT NULL,
   `note_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `label` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `query` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `query` longtext COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8_general_ci NOT NULL,
   `is_primary` tinyint(1) NOT NULL DEFAULT '0',
-  `actioned_text` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `nonce_action` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `nonce_name` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `actioned_text` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `nonce_action` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `nonce_name` varchar(255) COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_wc_admin_note_actions`
@@ -4997,7 +4997,7 @@ INSERT INTO `wp_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`,
 CREATE TABLE `wp_wc_category_lookup` (
   `category_tree_id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_wc_category_lookup`
@@ -5021,17 +5021,17 @@ INSERT INTO `wp_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
 CREATE TABLE `wp_wc_customer_lookup` (
   `customer_id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `username` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `first_name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `last_name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `username` varchar(60) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `first_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_general_ci DEFAULT NULL,
   `date_last_active` timestamp NULL DEFAULT NULL,
   `date_registered` timestamp NULL DEFAULT NULL,
-  `country` char(2) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `postcode` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `city` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `state` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `country` char(2) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `postcode` varchar(20) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `city` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `state` varchar(100) COLLATE utf8_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5044,8 +5044,8 @@ CREATE TABLE `wp_wc_download_log` (
   `timestamp` datetime NOT NULL,
   `permission_id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `user_ip_address` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `user_ip_address` varchar(100) COLLATE utf8_general_ci DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5058,7 +5058,7 @@ CREATE TABLE `wp_wc_order_coupon_lookup` (
   `coupon_id` bigint NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `discount_amount` double NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5080,7 +5080,7 @@ CREATE TABLE `wp_wc_order_product_lookup` (
   `tax_amount` double NOT NULL DEFAULT '0',
   `shipping_amount` double NOT NULL DEFAULT '0',
   `shipping_tax_amount` double NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5099,9 +5099,9 @@ CREATE TABLE `wp_wc_order_stats` (
   `shipping_total` double NOT NULL DEFAULT '0',
   `net_total` double NOT NULL DEFAULT '0',
   `returning_customer` tinyint(1) DEFAULT NULL,
-  `status` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `status` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `customer_id` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5116,7 +5116,7 @@ CREATE TABLE `wp_wc_order_tax_lookup` (
   `shipping_tax` double NOT NULL DEFAULT '0',
   `order_tax` double NOT NULL DEFAULT '0',
   `total_tax` double NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5126,20 +5126,20 @@ CREATE TABLE `wp_wc_order_tax_lookup` (
 
 CREATE TABLE `wp_wc_product_meta_lookup` (
   `product_id` bigint NOT NULL,
-  `sku` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT '',
+  `sku` varchar(100) COLLATE utf8_general_ci DEFAULT '',
   `virtual` tinyint(1) DEFAULT '0',
   `downloadable` tinyint(1) DEFAULT '0',
   `min_price` decimal(19,4) DEFAULT NULL,
   `max_price` decimal(19,4) DEFAULT NULL,
   `onsale` tinyint(1) DEFAULT '0',
   `stock_quantity` double DEFAULT NULL,
-  `stock_status` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT 'instock',
+  `stock_status` varchar(100) COLLATE utf8_general_ci DEFAULT 'instock',
   `rating_count` bigint DEFAULT '0',
   `average_rating` decimal(3,2) DEFAULT '0.00',
   `total_sales` bigint DEFAULT '0',
-  `tax_status` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT 'taxable',
-  `tax_class` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `tax_status` varchar(100) COLLATE utf8_general_ci DEFAULT 'taxable',
+  `tax_class` varchar(100) COLLATE utf8_general_ci DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_wc_product_meta_lookup`
@@ -5184,7 +5184,7 @@ CREATE TABLE `wp_wc_reserved_stock` (
   `stock_quantity` double NOT NULL DEFAULT '0',
   `timestamp` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `expires` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5194,9 +5194,9 @@ CREATE TABLE `wp_wc_reserved_stock` (
 
 CREATE TABLE `wp_wc_tax_rate_classes` (
   `tax_rate_class_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `slug` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `slug` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_wc_tax_rate_classes`
@@ -5214,12 +5214,12 @@ INSERT INTO `wp_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALUE
 
 CREATE TABLE `wp_wc_webhooks` (
   `webhook_id` bigint UNSIGNED NOT NULL,
-  `status` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `status` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `name` text COLLATE utf8_general_ci NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL,
-  `delivery_url` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `secret` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `topic` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `delivery_url` text COLLATE utf8_general_ci NOT NULL,
+  `secret` text COLLATE utf8_general_ci NOT NULL,
+  `topic` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_created_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -5227,7 +5227,7 @@ CREATE TABLE `wp_wc_webhooks` (
   `api_version` smallint NOT NULL,
   `failure_count` smallint NOT NULL DEFAULT '0',
   `pending_delivery` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5238,14 +5238,14 @@ CREATE TABLE `wp_wc_webhooks` (
 CREATE TABLE `wp_woocommerce_api_keys` (
   `key_id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL,
-  `description` varchar(200) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `permissions` varchar(10) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `consumer_key` char(64) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `consumer_secret` char(43) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `nonces` longtext COLLATE utf8mb4_unicode_520_ci,
-  `truncated_key` char(7) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `description` varchar(200) COLLATE utf8_general_ci DEFAULT NULL,
+  `permissions` varchar(10) COLLATE utf8_general_ci NOT NULL,
+  `consumer_key` char(64) COLLATE utf8_general_ci NOT NULL,
+  `consumer_secret` char(43) COLLATE utf8_general_ci NOT NULL,
+  `nonces` longtext COLLATE utf8_general_ci,
+  `truncated_key` char(7) COLLATE utf8_general_ci NOT NULL,
   `last_access` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5255,12 +5255,12 @@ CREATE TABLE `wp_woocommerce_api_keys` (
 
 CREATE TABLE `wp_woocommerce_attribute_taxonomies` (
   `attribute_id` bigint UNSIGNED NOT NULL,
-  `attribute_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `attribute_label` varchar(200) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `attribute_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `attribute_orderby` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `attribute_name` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `attribute_label` varchar(200) COLLATE utf8_general_ci DEFAULT NULL,
+  `attribute_type` varchar(20) COLLATE utf8_general_ci NOT NULL,
+  `attribute_orderby` varchar(20) COLLATE utf8_general_ci NOT NULL,
   `attribute_public` int NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_woocommerce_attribute_taxonomies`
@@ -5278,9 +5278,9 @@ INSERT INTO `wp_woocommerce_attribute_taxonomies` (`attribute_id`, `attribute_na
 CREATE TABLE `wp_woocommerce_bundled_itemmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `bundled_item_id` bigint UNSIGNED NOT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_woocommerce_bundled_itemmeta`
@@ -5541,7 +5541,7 @@ CREATE TABLE `wp_woocommerce_bundled_items` (
   `product_id` bigint UNSIGNED NOT NULL,
   `bundle_id` bigint UNSIGNED NOT NULL,
   `menu_order` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_woocommerce_bundled_items`
@@ -5568,17 +5568,17 @@ INSERT INTO `wp_woocommerce_bundled_items` (`bundled_item_id`, `product_id`, `bu
 
 CREATE TABLE `wp_woocommerce_downloadable_product_permissions` (
   `permission_id` bigint UNSIGNED NOT NULL,
-  `download_id` varchar(36) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `download_id` varchar(36) COLLATE utf8_general_ci NOT NULL,
   `product_id` bigint UNSIGNED NOT NULL,
   `order_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `order_key` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `user_email` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `order_key` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `user_email` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `downloads_remaining` varchar(9) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `downloads_remaining` varchar(9) COLLATE utf8_general_ci DEFAULT NULL,
   `access_granted` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `access_expires` datetime DEFAULT NULL,
   `download_count` bigint UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5590,10 +5590,10 @@ CREATE TABLE `wp_woocommerce_log` (
   `log_id` bigint UNSIGNED NOT NULL,
   `timestamp` datetime NOT NULL,
   `level` smallint NOT NULL,
-  `source` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `message` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `context` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `source` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `message` longtext COLLATE utf8_general_ci NOT NULL,
+  `context` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5604,9 +5604,9 @@ CREATE TABLE `wp_woocommerce_log` (
 CREATE TABLE `wp_woocommerce_order_itemmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `order_item_id` bigint UNSIGNED NOT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5616,10 +5616,10 @@ CREATE TABLE `wp_woocommerce_order_itemmeta` (
 
 CREATE TABLE `wp_woocommerce_order_items` (
   `order_item_id` bigint UNSIGNED NOT NULL,
-  `order_item_name` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `order_item_type` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `order_item_name` text COLLATE utf8_general_ci NOT NULL,
+  `order_item_type` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `order_id` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5630,9 +5630,9 @@ CREATE TABLE `wp_woocommerce_order_items` (
 CREATE TABLE `wp_woocommerce_payment_tokenmeta` (
   `meta_id` bigint UNSIGNED NOT NULL,
   `payment_token_id` bigint UNSIGNED NOT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5642,12 +5642,12 @@ CREATE TABLE `wp_woocommerce_payment_tokenmeta` (
 
 CREATE TABLE `wp_woocommerce_payment_tokens` (
   `token_id` bigint UNSIGNED NOT NULL,
-  `gateway_id` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `token` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `gateway_id` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `token` text COLLATE utf8_general_ci NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL DEFAULT '0',
-  `type` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `type` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `is_default` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5657,10 +5657,10 @@ CREATE TABLE `wp_woocommerce_payment_tokens` (
 
 CREATE TABLE `wp_woocommerce_sessions` (
   `session_id` bigint UNSIGNED NOT NULL,
-  `session_key` char(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `session_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `session_key` char(32) COLLATE utf8_general_ci NOT NULL,
+  `session_value` longtext COLLATE utf8_general_ci NOT NULL,
   `session_expiry` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_woocommerce_sessions`
@@ -5692,9 +5692,9 @@ INSERT INTO `wp_woocommerce_sessions` (`session_id`, `session_key`, `session_val
 
 CREATE TABLE `wp_woocommerce_shipping_zones` (
   `zone_id` bigint UNSIGNED NOT NULL,
-  `zone_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `zone_name` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `zone_order` bigint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5705,9 +5705,9 @@ CREATE TABLE `wp_woocommerce_shipping_zones` (
 CREATE TABLE `wp_woocommerce_shipping_zone_locations` (
   `location_id` bigint UNSIGNED NOT NULL,
   `zone_id` bigint UNSIGNED NOT NULL,
-  `location_code` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `location_type` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `location_code` varchar(200) COLLATE utf8_general_ci NOT NULL,
+  `location_type` varchar(40) COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5718,10 +5718,10 @@ CREATE TABLE `wp_woocommerce_shipping_zone_locations` (
 CREATE TABLE `wp_woocommerce_shipping_zone_methods` (
   `zone_id` bigint UNSIGNED NOT NULL,
   `instance_id` bigint UNSIGNED NOT NULL,
-  `method_id` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `method_id` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `method_order` bigint UNSIGNED NOT NULL,
   `is_enabled` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5731,16 +5731,16 @@ CREATE TABLE `wp_woocommerce_shipping_zone_methods` (
 
 CREATE TABLE `wp_woocommerce_tax_rates` (
   `tax_rate_id` bigint UNSIGNED NOT NULL,
-  `tax_rate_country` varchar(2) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate_state` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate` varchar(8) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `tax_rate_country` varchar(2) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `tax_rate_state` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `tax_rate` varchar(8) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `tax_rate_name` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `tax_rate_priority` bigint UNSIGNED NOT NULL,
   `tax_rate_compound` int NOT NULL DEFAULT '0',
   `tax_rate_shipping` int NOT NULL DEFAULT '1',
   `tax_rate_order` bigint UNSIGNED NOT NULL,
-  `tax_rate_class` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `tax_rate_class` varchar(200) COLLATE utf8_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5750,10 +5750,10 @@ CREATE TABLE `wp_woocommerce_tax_rates` (
 
 CREATE TABLE `wp_woocommerce_tax_rate_locations` (
   `location_id` bigint UNSIGNED NOT NULL,
-  `location_code` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `location_code` varchar(200) COLLATE utf8_general_ci NOT NULL,
   `tax_rate_id` bigint UNSIGNED NOT NULL,
-  `location_type` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `location_type` varchar(40) COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -5853,23 +5853,23 @@ INSERT INTO `wp_wpf_usage_stat` (`id`, `code`, `visits`, `spent_time`, `modify_t
 
 CREATE TABLE `wp_yoast_indexable` (
   `id` int UNSIGNED NOT NULL,
-  `permalink` longtext COLLATE utf8mb4_unicode_520_ci,
-  `permalink_hash` varchar(40) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `permalink` longtext COLLATE utf8_general_ci,
+  `permalink_hash` varchar(40) COLLATE utf8_general_ci DEFAULT NULL,
   `object_id` bigint DEFAULT NULL,
-  `object_type` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `object_sub_type` varchar(32) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `object_type` varchar(32) COLLATE utf8_general_ci NOT NULL,
+  `object_sub_type` varchar(32) COLLATE utf8_general_ci DEFAULT NULL,
   `author_id` bigint DEFAULT NULL,
   `post_parent` bigint DEFAULT NULL,
-  `title` text COLLATE utf8mb4_unicode_520_ci,
-  `description` mediumtext COLLATE utf8mb4_unicode_520_ci,
-  `breadcrumb_title` text COLLATE utf8mb4_unicode_520_ci,
-  `post_status` varchar(20) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `title` text COLLATE utf8_general_ci,
+  `description` mediumtext COLLATE utf8_general_ci,
+  `breadcrumb_title` text COLLATE utf8_general_ci,
+  `post_status` varchar(20) COLLATE utf8_general_ci DEFAULT NULL,
   `is_public` tinyint(1) DEFAULT NULL,
   `is_protected` tinyint(1) DEFAULT '0',
   `has_public_posts` tinyint(1) DEFAULT NULL,
   `number_of_pages` int UNSIGNED DEFAULT NULL,
-  `canonical` longtext COLLATE utf8mb4_unicode_520_ci,
-  `primary_focus_keyword` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `canonical` longtext COLLATE utf8_general_ci,
+  `primary_focus_keyword` varchar(191) COLLATE utf8_general_ci DEFAULT NULL,
   `primary_focus_keyword_score` int DEFAULT NULL,
   `readability_score` int DEFAULT NULL,
   `is_cornerstone` tinyint(1) DEFAULT '0',
@@ -5878,31 +5878,31 @@ CREATE TABLE `wp_yoast_indexable` (
   `is_robots_noarchive` tinyint(1) DEFAULT '0',
   `is_robots_noimageindex` tinyint(1) DEFAULT '0',
   `is_robots_nosnippet` tinyint(1) DEFAULT '0',
-  `twitter_title` text COLLATE utf8mb4_unicode_520_ci,
-  `twitter_image` longtext COLLATE utf8mb4_unicode_520_ci,
-  `twitter_description` longtext COLLATE utf8mb4_unicode_520_ci,
-  `twitter_image_id` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `twitter_image_source` text COLLATE utf8mb4_unicode_520_ci,
-  `open_graph_title` text COLLATE utf8mb4_unicode_520_ci,
-  `open_graph_description` longtext COLLATE utf8mb4_unicode_520_ci,
-  `open_graph_image` longtext COLLATE utf8mb4_unicode_520_ci,
-  `open_graph_image_id` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `open_graph_image_source` text COLLATE utf8mb4_unicode_520_ci,
-  `open_graph_image_meta` mediumtext COLLATE utf8mb4_unicode_520_ci,
+  `twitter_title` text COLLATE utf8_general_ci,
+  `twitter_image` longtext COLLATE utf8_general_ci,
+  `twitter_description` longtext COLLATE utf8_general_ci,
+  `twitter_image_id` varchar(191) COLLATE utf8_general_ci DEFAULT NULL,
+  `twitter_image_source` text COLLATE utf8_general_ci,
+  `open_graph_title` text COLLATE utf8_general_ci,
+  `open_graph_description` longtext COLLATE utf8_general_ci,
+  `open_graph_image` longtext COLLATE utf8_general_ci,
+  `open_graph_image_id` varchar(191) COLLATE utf8_general_ci DEFAULT NULL,
+  `open_graph_image_source` text COLLATE utf8_general_ci,
+  `open_graph_image_meta` mediumtext COLLATE utf8_general_ci,
   `link_count` int DEFAULT NULL,
   `incoming_link_count` int DEFAULT NULL,
   `prominent_words_version` int UNSIGNED DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `blog_id` bigint NOT NULL DEFAULT '1',
-  `language` varchar(32) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `region` varchar(32) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `schema_page_type` varchar(64) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `schema_article_type` varchar(64) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `language` varchar(32) COLLATE utf8_general_ci DEFAULT NULL,
+  `region` varchar(32) COLLATE utf8_general_ci DEFAULT NULL,
+  `schema_page_type` varchar(64) COLLATE utf8_general_ci DEFAULT NULL,
+  `schema_article_type` varchar(64) COLLATE utf8_general_ci DEFAULT NULL,
   `has_ancestors` tinyint(1) DEFAULT '0',
   `estimated_reading_time_minutes` int DEFAULT NULL,
   `version` int DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_yoast_indexable`
@@ -6048,7 +6048,7 @@ CREATE TABLE `wp_yoast_indexable_hierarchy` (
   `ancestor_id` int UNSIGNED NOT NULL,
   `depth` int UNSIGNED DEFAULT NULL,
   `blog_id` bigint NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_yoast_indexable_hierarchy`
@@ -6137,8 +6137,8 @@ INSERT INTO `wp_yoast_indexable_hierarchy` (`indexable_id`, `ancestor_id`, `dept
 
 CREATE TABLE `wp_yoast_migrations` (
   `id` int UNSIGNED NOT NULL,
-  `version` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `version` varchar(191) COLLATE utf8_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_yoast_migrations`
@@ -6178,11 +6178,11 @@ CREATE TABLE `wp_yoast_primary_term` (
   `id` int UNSIGNED NOT NULL,
   `post_id` bigint DEFAULT NULL,
   `term_id` bigint DEFAULT NULL,
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `taxonomy` varchar(32) COLLATE utf8_general_ci NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `blog_id` bigint NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `wp_yoast_primary_term`

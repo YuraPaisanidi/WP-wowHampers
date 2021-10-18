@@ -23,17 +23,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <form class="shop__filters" method="get">
 	<div class="shop__filters_items">
 		<span>Filters:</span>
-		<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
-			<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-				<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
-			<?php endforeach; ?>
-		</select>
+		<?php echo do_shortcode( '[wpf-filters id=2]' ); ?>
 	</div>
 	<div class="shop__filters_items">
 		<!--<a href="#">For her</a>
-		<a href="#" class="active">Party Hampers</a>
-		<a href="#">Corporate gifts</a> -->
+		<a href="#" class="active">Party Hampers</a>-->
+		
 		<?php echo do_shortcode( '[wpf-filters id=1]' ); ?>
+		<a class="shop__filters_link" href="<?php echo get_home_url(); ?>/corporate-gifts">Corporate gifts</a>
 	</div>
 	<input type="hidden" name="paged" value="1" />
 	<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>

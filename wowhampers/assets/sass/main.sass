@@ -381,6 +381,7 @@
 					visibility: hidden
 					opacity: 0
 					overflow: auto
+					min-width: 155px
 					border-radius: 15px
 
 					+r(576)
@@ -723,6 +724,11 @@
 		+r(1200)
 			display: none
 
+		img
+
+			+r(1500)
+				width: 300px
+
 	.parallax--3
 		position: absolute
 		left: 0
@@ -896,7 +902,8 @@
 				top: 50%
 				transform: translate(-50%, -50%)
 				object-fit: cover
-				min-width: 100%
+				// min-width: 100%
+				width: 100%
 				height: 100%
 
 		&_price
@@ -1029,7 +1036,7 @@
 
 	&__btn
 		height: 41px
-		min-width: auto
+		width: 41px
 		border: 1px solid $dark
 		display: flex
 		align-items: center
@@ -1040,15 +1047,18 @@
 		position: absolute
 		right: 7px
 		top: 10%
+		padding-bottom: 5px
+		color: $dark
 
 		&:hover
 			background: $accent
 			border-color: $accent
-			svg
+			color: #fff
+			// svg
 
-				path
+			// 	path
 
-					fill: #fff
+			// 		fill: #fff
 
 .reviews
 	padding-top: 150px
@@ -1093,6 +1103,7 @@
 		&_info
 			position: absolute
 			height: 100%
+			width: 100%
 			top: 0
 			display: flex
 			flex-direction: column
@@ -1206,6 +1217,14 @@
 		&_item
 			max-width: 290px
 			width: 100%
+
+		.email__btn
+			top: 6%
+			right: 15px
+
+		.caldera-grid
+			width: 100%
+			padding-top: 0 !important
 
 	&__contacts
 		display: flex
@@ -1644,6 +1663,7 @@
 			a
 				color: $dark
 				font-weight: 700
+				font-family: $font2
 				padding: 0 20px
 				height: 100%
 				display: flex
@@ -1657,6 +1677,11 @@
 
 				+r(480)
 					font-size: 14px
+
+				&:hover,
+				&:active
+					background-color: $accent
+					color: #fff
 
 				&.active
 					background: $accent
@@ -1746,6 +1771,7 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		gap: 10px
 
 		blockquote
 			margin: 40px 0
@@ -1782,6 +1808,15 @@
 
 		ul,ol
 			padding-left: 20px
+
+		p
+			width: 100%
+
+		img
+			max-height: 400px
+			width: 100%
+			object-fit: cover
+			border-radius: 15px
 
 	&__img
 		margin-bottom: 80px
@@ -2497,9 +2532,17 @@
 		+r(992)
 			width: 100%
 			gap: 10px
+			height: 600px
+			overflow: hidden
+
+		+r(767)
+			height: 500px
 
 		+r(576)
-			height: 300px
+			height: 450px
+
+		+r(480)
+			height: 330px
 
 		&_main
 			width: 485px
@@ -2697,15 +2740,34 @@
 			display: flex
 			gap: 15px
 
+			+r(480)
+				gap: 5px
+
 		.variable-item
-			width: auto !important
-			height: auto !important
+			width: 90px !important
+			height: 90px !important
 			border-radius: 100%
 			border: 3px solid transparent
+			overflow: hidden
+
+			+r(576)
+				width: 70px !important
+				height: 70px !important
+
+			+r(480)
+				width: 60px !important
+				height: 60px !important
 
 			&.selected
 				border: 3px solid $accent
 
+			&-contents
+				width: 100%
+			
+			&-image
+				object-fit: cover
+				width: 100%
+				height: 100%
 
 
 	&__related
@@ -2769,9 +2831,17 @@
 	.flex-active
 		border: 1px solid #b7b7b7
 
+	.woocommerce-product-details
+
+		&__short-description
+			margin-bottom: 20px
+
+.reset_variations
+	display: none !important
+
 .product-type-composite
 	display: grid
-	grid-template-columns: 500px 1fr
+	grid-template-columns: 450px 1fr
 
 	+r(1200)
 		grid-template-columns: 1fr
@@ -2842,8 +2912,8 @@
 
 		&_products
 			display: grid
-			grid-template-columns: 1fr 1fr 1fr 1fr
-			gap: 30px
+			grid-template-columns: 1fr 1fr 1fr
+			gap: 10px
 			align-items: flex-start
 			justify-content: center
 			padding-bottom: 0
@@ -2857,6 +2927,15 @@
 			align-items: center
 			gap: 20px
 			padding-bottom: 5px
+
+			&_title
+				font-family: $font2
+				font-weight: 700
+				color: $dark
+				margin-bottom: 5px
+
+			&_excerpt
+				margin-bottom: 10px
 
 			&_image
 				border-radius: 15px
@@ -2919,7 +2998,8 @@
 	&__close
 		position: absolute
 		right: 0
-		top: -40px
+		// top: -40px
+		top: -20px
 		display: block
 		width: 30px
 		height: 30px
@@ -2945,7 +3025,7 @@
 			position: absolute
 			left: 50%
 			top: 50%
-			background: #fff
+			background: $dark
 			transition: all .6s
 			border-radius: 4px
 			height: 22px
@@ -3440,6 +3520,29 @@
 	h2,h3,h4,h5
 		margin-bottom: 10px
 
+	h5
+		color: $title
+		font-size: 22px
+		text-align: center
+		font-weight: 700
+		font-family: $font2
+		max-width: 590px
+		align-self: center
+
+	h6
+		text-align: center
+		font-weight: 700
+		font-family: $font2
+		font-size: 32px
+		color: $accent
+		margin-top: 30px
+		max-width: 590px
+		align-self: center
+
+
+		+r(576)
+			font-size: 24px
+
 	p
 		margin-bottom: 20px
 		word-break: break-all
@@ -3593,6 +3696,11 @@
 		&:hover
 			background: $dark !important
 
+.bundle_table_item,
+.bundled_table_item
+	display: none
+
+
 .login-page
 
 	&__wrap
@@ -3639,15 +3747,21 @@
 
 .woocommerce-notices-wrapper
 	position: absolute
-	top: 7%
+	// top: 7%
+	top: 4%
 	left: 50%
 	right: 0
+	z-index: 100
 	max-width: 590px
 	transform: translate(-50%, 5px)
+
+	a
+		color: $accent
 
 .woocommerce-error
 	li
 		padding-left: 15px !important
+	
 
 .pagination
 	display: flex
@@ -3673,3 +3787,61 @@
 a.wishlist_products_counter.top_wishlist-custom img,
 span.wishlist_products_counter.top_wishlist-custom img
 	margin: 0 !important
+
+.about
+
+	&__container
+		align-items: center
+		max-width: 830px
+
+	&__header
+		width: 100%
+
+	&__img
+
+		+r(992)
+			max-width: 400px
+
+		+r(480)
+			max-width: 280px
+
+	&__gif
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 617px
+		width: 730px
+		background: url(../img/about-conf.png)
+		background-size: 100%
+		background-repeat: no-repeat
+		position: relative
+
+		+r(992)
+			height: 420px
+			width: 420px
+			padding-bottom: 65px
+			// width: 50%
+
+		+r(480)
+			height: 300px
+			width: 300px
+			padding-bottom: 45px
+
+		img
+			width: 448px
+			height: 448px
+			border-radius: 100%
+
+			+r(992)
+				width: 250px
+				height: 250px
+
+			+r(480)
+				width: 190px
+				height: 190px
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+	-webkit-appearance: none
+	margin: 0;

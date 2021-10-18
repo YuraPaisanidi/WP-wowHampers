@@ -1,4 +1,13 @@
 FTP:
 Host: ftp.wowhamper.com.au
-User: developer@wowhamper.com.au
-Password: ji&HNAW%WKn^
+User: dev@wowhamper.com.au
+Password: ?5Zllsk&.SBo
+
+PHPMyAdmin:
+User: wowha391_WjJs7Q
+DB name: wowha391_wowhampers
+Password: FN(9YHInb}^P
+
+WP:
+Login: Admin
+Password: cBTHitTspnED*KcA

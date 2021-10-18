@@ -101,7 +101,7 @@ get_header();
 <section class="steps">
 	<div class="steps__container container">
 		<div class="steps__img">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif.gif" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif-3.gif" alt="">
 		</div>
 		<div class="steps__text">
 			<h3 class="h3 steps__title">
@@ -156,7 +156,7 @@ get_header();
 				</div>
 				<span>Party Hampers</span>
 			</a>
-			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=26" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/corporate-gifts" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-3.png" alt="">
 				</div>
@@ -183,11 +183,11 @@ get_header();
 			<div class="swiper-button-prev gifts__prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev.svg" alt=""></div>
 			<div class="swiper-button-next gifts__next"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next.svg" alt=""></div>
 		</div>
-		<?php echo do_shortcode( '[product per_page="8"]' ); ?>
+		<?php echo do_shortcode( '[product per_page="8" featured_products]' ); ?>
 	</div>
 	
 
-	<a href="#" class="btn gifts__btn">See all</a>
+	<a href="<?php echo get_home_url(); ?>/shop" class="btn gifts__btn">See all</a>
 </section>
 
 <section class="email">
@@ -201,13 +201,9 @@ get_header();
 				Turpis rutrum nunc consequat, elementum, vel molestie volutpat auctor.
 			</p>
 			<div class="form__item email__item">
-				<input id="formMail" type="email" name="mail" placeholder="Your Email" class="form__input email__input _req _email">
-				<button type="submit" class="form__btn_button email__btn" name="submit">
-					<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M9.35355 4.35355C9.54882 4.15829 9.54882 3.84171 9.35355 3.64645L6.17157 0.464466C5.97631 0.269204 5.65973 0.269204 5.46447 0.464466C5.2692 0.659728 5.2692 0.976311 5.46447 1.17157L8.29289 4L5.46447 6.82843C5.2692 7.02369 5.2692 7.34027 5.46447 7.53553C5.65973 7.7308 5.97631 7.7308 6.17157 7.53553L9.35355 4.35355ZM0 4.5H9V3.5H0V4.5Z" fill="#4A4967"/>
-					</svg>
-				</button>
+				<?php echo do_shortcode( '[contact-form-7 id="304" title="Subscribe"]' ); ?>
 			</div>
+			
 		</form>
 	</div>
 </section>
@@ -221,10 +217,10 @@ get_header();
 				$img = get_sub_field('img');
 				$user = get_sub_field('user');
 				$text = get_sub_field('text');
-				// $icon = get_sub_field('icon');
+				$url = get_sub_field('url');
 				?>
 
-				<div class="reviews__item">
+				<a href="<?php echo $url ?>" class="reviews__item" target="_blank">
 					<div class="reviews__item_img">
 						<img src="<?php echo $img ?>" alt="">
 					</div>
@@ -237,7 +233,7 @@ get_header();
 							<?php echo $text ?>
 						</p>
 					</div>
-				</div>
+				</a>
 
 			<?php endwhile; ?>
 
