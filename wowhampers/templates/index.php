@@ -42,59 +42,11 @@ get_header();
 							</div>
 						</div>
 
-						
-
 					<?php endwhile; ?>
 				</div>
 				<div class="swiper-pagination hero__slider_pagination"></div>
 			</div>
 		<?php endif; ?>
-
-
-
-				<!--<div class="swiper-slide hero__slide hero__slide--color2">
-					<div class="hero__text">
-						<p class="hero__text_subtitle">
-							No time for gift shopping? No stress!
-						</p>
-						<div class="hero__text_price">
-							<h2 class="h2 hero__text_title">
-								Wow Hampers here to save hours of your time with our unique hampers
-							</h2>
-						</div>
-						<div class="hero__btns">
-							<a href="#" class="hero__btns_view btn">View Hampers!</a>
-							<a href="#" class="hero__btns_view btn">Build WOW Box!</a>
-						</div>
-					</div>
-
-					<div class="hero__img">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/girl.png" alt="">
-					</div>
-				</div>
-
-				<div class="swiper-slide hero__slide hero__slide--color3">
-					<div class="hero__text">
-						<p class="hero__text_subtitle">
-							Runout of inspiration for cool gifts?
-						</p>
-						<div class="hero__text_price">
-							<h2 class="h2 hero__text_title">
-								Wow Hampers make you a gifting hero right on your comfy couch!
-							</h2>
-						</div>
-						<div class="hero__btns">
-							<a href="#" class="hero__btns_view btn">View Hampers!</a>
-							<a href="#" class="hero__btns_view btn">Build WOW Box!</a>
-						</div>
-					</div>
-
-					<div class="hero__img">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/man.png" alt="">
-					</div>
-				</div> -->
-
-
 	</div>
 </section>
 

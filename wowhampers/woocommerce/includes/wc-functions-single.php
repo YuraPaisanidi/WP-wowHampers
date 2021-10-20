@@ -59,3 +59,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	//-----------------------------------Product add to cart------------------------------------------
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart',  30 );
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 50 );
+
+
+
+//-------------------------------Change product image zoom size---------------------------
+add_filter( 'woocommerce_gallery_full_size', 'change_magnifier_lightbox_image_size', 20, 1 );
+function change_magnifier_lightbox_image_size( $size ){
+    $thumbnail_id = get_post_thumbnail_id( get_the_id() );
+    $attachment   = wp_get_attachment_metadata( $thumbnail_id, FALSE );
+
+    // Always return a value in a filter hook
+    return ( $attachment['width'] > 3071 || $attachment['height'] > 3071 ) ? 'preview' : 'large';
+}
+
+//-----------------------------------Change arert text--------------
+add_filter( 'gettext', 'customizing_variable_product_message', 97, 3 );
+function customizing_variable_product_message( $translated_text, $untranslated_text, $domain )
+{
+    if ($untranslated_text == 'Please select some product options before adding this product to your cart.') {
+        $translated_text = __( 'Please select the packing before adding this product to your cart', $domain );
+    }
+    return $translated_text;
+}
