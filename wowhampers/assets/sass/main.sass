@@ -2317,6 +2317,11 @@
 			display: flex
 			justify-content: center
 
+	.help-block
+		font-size: 12px
+		position: absolute
+		right: 0
+
 .caldera-grid
 
 	.form-control
@@ -2327,6 +2332,7 @@
 
 	.form-group
 		padding: 0 !important
+		position: relative
 
 	textarea.form-control
 		width: 100%
@@ -2990,6 +2996,20 @@
 		+r(1200)
 			max-width: 1200px
 
+	.bundle_sells_form
+
+		+r(1200)
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr
+			width: 100%
+			margin-bottom: 0 !important
+
+		.bundled_product
+
+			+r(1200)
+				width: auto
+				height: auto
+
 
 	.product__img
 		+r(1200)
@@ -3022,6 +3042,7 @@
 
 		&_data
 			width: 100%
+			flex-direction: column
 
 		&_wrap
 			display: flex

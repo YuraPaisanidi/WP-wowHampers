@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			slidesPerView: 1,
 			spaceBetween: 20,
 			loop: true,
-			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 5000,
-			// 	disableOnInteraction: false,
-			// },
+			effect: 'fade',
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
 			pagination: {
 				el: '.hero__slider_pagination',
 				clickable: 'true',

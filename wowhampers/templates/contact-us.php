@@ -14,7 +14,7 @@ get_header();
 				</p>
 			</div>
 			<div class="contacts__info_right">
-				<span class="contacts__link">Got a question that isn't answered in our <a href="<?php echo get_home_url(); ?>/faq.html">FAQ's</a>?</span>
+				<span class="contacts__link">Got a question that isn't answered in our <a href="<?php echo get_home_url(); ?>/faq">FAQ's</a>?</span>
 				<a href="#" class="contacts__btn modal__write-us">
 					<p>Write Us</p>
 					<span class="contacts__icon">
