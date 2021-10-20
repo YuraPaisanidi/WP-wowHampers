@@ -31,26 +31,16 @@
 				</div>
 
 				<div class="footer__links">
-					<a href="#">
+					<a href="<?php the_field('social_link_1', 'option'); ?>" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/fb.svg" alt="">
 					</a>
-					<a href="#">
+					<a href="<?php the_field('social_link_2', 'option'); ?>" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/inst.svg" alt="">
 					</a>
 				</div>
 
 				<div class="form footer__subscribe">
 					<p>Subscribe!</p>
-
-					<!-- <div class="form__item footer__subscribe_item">
-						<input id="formMail" type="email" name="mail" placeholder="Your Email" class="form__input email__input _req _email">
-						<button type="submit" class="form__btn_button email__btn" name="submit">
-							<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M9.35355 4.35355C9.54882 4.15829 9.54882 3.84171 9.35355 3.64645L6.17157 0.464466C5.97631 0.269204 5.65973 0.269204 5.46447 0.464466C5.2692 0.659728 5.2692 0.976311 5.46447 1.17157L8.29289 4L5.46447 6.82843C5.2692 7.02369 5.2692 7.34027 5.46447 7.53553C5.65973 7.7308 5.97631 7.7308 6.17157 7.53553L9.35355 4.35355ZM0 4.5H9V3.5H0V4.5Z" fill="#4A4967"/>
-							</svg>
-						</button>
-					</div> -->
-					<!-- <?php echo do_shortcode( '[contact-form-7 id="304" title="Subscribe"]' ); ?> -->
 					<?php echo do_shortcode( '[caldera_form id="CF6169561f5e74b"]' ); ?>
 				</div>
 
@@ -61,6 +51,9 @@
 				<a href="tel:<?php the_field('tel_1_url', 'option'); ?>" class="footer__contacts_tel"><?php the_field('tel_1', 'option'); ?></a>
 				<a href="tel:<?php the_field('tel_2_url', 'option'); ?>" class="footer__contacts_tel"><?php the_field('tel_2', 'option'); ?></a>
 				<a href="mailto:info@gmail.com" class="footer__contacts_email"><?php the_field('email', 'option'); ?></a>
+				<a class="footer__contacts_email" href="https://www.google.com/maps/place/420+Pitt+St,+Sydney+NSW+2000,+%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B0%D0%BB%D0%B8%D1%8F/@-33.8790197,151.2053451,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae22d6e224f7:0xb6506a26a71906ed!8m2!3d-33.8790197!4d151.2075338" target="_blank">
+					420 Pitt Street, Haymarket, NSW, 2000
+				</a>
 			</div>
 		</div>
 

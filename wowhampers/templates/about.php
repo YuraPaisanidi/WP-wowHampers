@@ -46,7 +46,7 @@
 
 
 			<div class="about__gif">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif-4.gif" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif-3.gif" alt="">
 			</div>
 
 

@@ -55,16 +55,3 @@ function remove_required_fields( $required_fields ) {
 
 		return $required_fields;
 }
-
-
-$tag             = 'woocommerce_save_account_details'; 
-$function_to_add = 'my_save_account';
-$priority        = 10;
-$accepted_args   = 1; 
-add_action( $tag, $function_to_add, $priority, $accepted_args ); 
-function my_save_account($user_id) {
-  $date  = ! empty( $_POST[ 'date' ] ) ? $_POST[ 'date' ] : '';
-  update_user_meta($user_id, 'date', $date);
-	$phone  = ! empty( $_POST[ 'phone' ] ) ? $_POST[ 'phone' ] : '';
-  update_user_meta($user_id, 'phone', $phone);
-}

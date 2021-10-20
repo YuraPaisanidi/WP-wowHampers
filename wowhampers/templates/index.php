@@ -32,7 +32,7 @@ get_header();
 									<span class="hero__text_num"><?php echo $span; ?></span>
 								</div>
 								<div class="hero__btns">
-									<a href="<?php echo get_home_url(); ?>/shop" class="hero__btns_view btn">View Hampers!</a>
+									<a href="<?php echo get_home_url(); ?>/gifts" class="hero__btns_view btn">View Hampers!</a>
 									<a href="<?php echo get_home_url(); ?>/product/build-wow-box/" class="hero__btns_view btn">Build WOW Box!</a>
 								</div>
 							</div>
@@ -101,7 +101,7 @@ get_header();
 <section class="steps">
 	<div class="steps__container container">
 		<div class="steps__img">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif-3.gif" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/gif-4.gif" alt="">
 		</div>
 		<div class="steps__text">
 			<h3 class="h3 steps__title">
@@ -144,13 +144,13 @@ get_header();
 			modern gifts , all designed to inspire happiness. 
 		</p>
 		<div class="categories__wrap">
-			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=24" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/gifts/?filter_cat_0=24" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-1.png" alt="">
 				</div>
 				<span>For Her</span>
 			</a>
-			<a href="<?php echo get_home_url(); ?>/shop/?filter_cat_0=25" class="categories__item">
+			<a href="<?php echo get_home_url(); ?>/gifts/?filter_cat_0=25" class="categories__item">
 				<div class="categories__item_img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat-2.png" alt="">
 				</div>
@@ -187,24 +187,23 @@ get_header();
 	</div>
 	
 
-	<a href="<?php echo get_home_url(); ?>/shop" class="btn gifts__btn">See all</a>
+	<a href="<?php echo get_home_url(); ?>/gifts" class="btn gifts__btn">See all</a>
 </section>
 
 <section class="email">
 	<div class="email__container container">
-		<form action="#" method="POST" class="form email__form">
+		<div class="form email__form">
 			<h3 class="h3 email__title">
-				<span>Don’t miss your chance</span> to be aware of new products!
+				<span>Don't miss your chance</span> to get an individual free gifting consultation!
 			</h3>
 			<p class="email__subtitle">
-				Commodo, eu tristique sed nulla malesuada porttitor morbi purus eros. 
-				Turpis rutrum nunc consequat, elementum, vel molestie volutpat auctor.
+				Subscribe for our newsletter and we will individually help your to choose a perfect gift hamper for any person and any occasion &#128157;
 			</p>
 			<div class="form__item email__item">
-				<?php echo do_shortcode( '[contact-form-7 id="304" title="Subscribe"]' ); ?>
+				<?php echo do_shortcode( '[caldera_form id="CF6169561f5e74b"]' ); ?>
 			</div>
 			
-		</form>
+		</div>
 	</div>
 </section>
 

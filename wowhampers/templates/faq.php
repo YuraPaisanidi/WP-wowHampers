@@ -5,7 +5,7 @@ get_header();
 
 <section class="faq">
 	<div class="faq__container">
-		<h4 class="h4 faq__title">FAQ</h4>
+		<h4 class="h4 faq__title">Help&info</h4>
 		<?php if( have_rows('faq') ): ?>
 			<div class="faq__wrap">
 				<?php while( have_rows('faq') ): the_row(); 

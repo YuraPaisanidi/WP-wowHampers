@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			// effect: 'fade',
 			autoplay: {
 				delay: 5000,
+				disableOnInteraction: false,
 			},
 			pagination: {
 				el: '.hero__slider_pagination',

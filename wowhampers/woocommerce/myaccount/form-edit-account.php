@@ -37,7 +37,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</p>
 
 	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<input type="text" class="woocommerce-Input woocommerce-Input--phone input-text profile__input" name="billing_mobile_phone" placeholder="Phone number" id="billing_mobile_phone" value="<?php echo esc_attr( $user->phone ); ?>" />
+		<input type="text" class="woocommerce-Input woocommerce-Input--phone input-text profile__input" name="billing_mobile_phone" placeholder="Phone number" id="billing_mobile_phone" value="<?php echo esc_attr( $user->billing_mobile_phone ); ?>" />
 	</p>
 
 	<p class="form-row form-row-wide">

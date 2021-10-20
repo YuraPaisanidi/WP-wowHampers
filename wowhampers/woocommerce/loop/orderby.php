@@ -26,9 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php echo do_shortcode( '[wpf-filters id=2]' ); ?>
 	</div>
 	<div class="shop__filters_items">
-		<!--<a href="#">For her</a>
-		<a href="#" class="active">Party Hampers</a>-->
-		
 		<?php echo do_shortcode( '[wpf-filters id=1]' ); ?>
 		<a class="shop__filters_link" href="<?php echo get_home_url(); ?>/corporate-gifts">Corporate gifts</a>
 	</div>

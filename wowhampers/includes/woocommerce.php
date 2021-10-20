@@ -79,7 +79,7 @@ add_filter('body_class', 'project_woocommerce_active_body_class');
  */
 function project_woocommerce_products_per_page()
 {
-	return 6;
+	return 12;
 }
 add_filter('loop_shop_per_page', 'project_woocommerce_products_per_page');
 
@@ -323,9 +323,9 @@ if (!function_exists('project_woocommerce_wrapper_before')) {
 	}
 
 	// remove zero in the prices
-add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
-function wc_hide_trailing_zeros( $trim ) {
+// add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
+// function wc_hide_trailing_zeros( $trim ) {
 
-return true;
+// return true;
 
-}
+// }
