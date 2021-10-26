@@ -405,57 +405,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	};
 	tabs('.tabs', '.tabs__item', '.tabs__wrap', 'active');
 
-//---------------------Switch login/registration--------------
-// let loginTab = document.getElementById('login-form-show');
-// let regTab = document.getElementById('reg-form-show');
-// let loginTabContent = document.getElementById('login-form');
-// let regTabContent = document.getElementById('reg-form');
 
-// function showLogin () {
-// 	loginTabContent.classList.add('log-active');
-// 	regTabContent.classList.remove('log-active');
-// }
-
-// function showReg () {
-// 	loginTabContent.classList.remove('log-active');
-// 	regTabContent.classList.add('log-active');
-
-// }
-
-// loginTab.addEventListener('click', showLogin);
-// regTab.addEventListener('click', showReg);
-
-// function checkUrl(){
-
-// 	let linkHrefReg = window.location.toString().includes("registration");
-// 	let linkHrefLog = window.location.toString().includes("login");
-
-// 		console.log(linkHrefReg);
-
-// 		if(linkHrefReg){
-// 			showReg();
-// 		} else if(linkHrefLog) {
-// 			showLogin();
-// 		} else {
-// 			console.log('error');
-// 		}
-// }
-
-// checkUrl();
-
-// const showReg = () => {
-// 	document.querySelector('#login-wrap').classList.remove('active');
-// 	document.querySelector('#reg-wrap').classList.add('active');
-// }
-
-// const showLog = () => {
-// 	document.querySelector('#login-wrap').classList.add('active');
-// 	document.querySelector('#reg-wrap').classList.remove('active');
-// }
-
-// document.querySelector('#menu-item-252').addEventListener('click', showLog);
-// document.querySelector('#menu-item-255').addEventListener('click', showReg);
-
-
+	
 });
 

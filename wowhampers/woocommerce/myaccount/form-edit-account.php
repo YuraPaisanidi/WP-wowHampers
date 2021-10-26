@@ -41,9 +41,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</p>
 
 	<p class="form-row form-row-wide">
-			<label for="phone">Important Dates</label>
-			<input type="date" class="input-text" name="phone" id="phone" value="<?php echo esc_attr( $user->date ); ?>" />
-		</p>
+		<label for="date">Important date</label>
+		<input type="date" class="input-text" name="date" id="date" value="<?php echo esc_attr( $user->date ); ?>" required />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="occasion">Occasion Name</label>
+		<input type="text" class="input-text" name="occasion" id="occasion" value="<?php echo esc_attr( $user->occasion ); ?>" required />
+	</p>
 
 </div>
 

@@ -329,3 +329,16 @@ if (!function_exists('project_woocommerce_wrapper_before')) {
 // return true;
 
 // }
+
+
+$tag             = 'woocommerce_save_account_details'; 
+$function_to_add = 'my_save_account';
+$priority        = 10;
+$accepted_args   = 1; 
+add_action( $tag, $function_to_add, $priority, $accepted_args ); 
+function my_save_account($user_id) {
+  $date  = ! empty( $_POST[ 'date' ] ) ? $_POST[ 'date' ] : '';
+  update_user_meta($user_id, 'date', $date);
+  $occasion  = ! empty( $_POST[ 'occasion' ] ) ? $_POST[ 'occasion' ] : '';
+  update_user_meta($user_id, 'occasion', $occasion);
+}
