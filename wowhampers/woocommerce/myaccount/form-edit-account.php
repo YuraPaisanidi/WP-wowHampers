@@ -50,6 +50,11 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="text" class="input-text" name="occasion" id="occasion" value="<?php echo esc_attr( $user->occasion ); ?>" required />
 	</p>
 
+	<p class="form-row form-row-wide">
+		<label for="info">Info about the gift receiver: age, gender, hobbies, your relationship (parent, boyfriend, colleague, etc</label>
+		<input type="text" class="input-text" name="info" id="info" value="<?php echo esc_attr( $user->info ); ?>" />
+	</p>
+
 </div>
 
 	<fieldset class="profile__password">
