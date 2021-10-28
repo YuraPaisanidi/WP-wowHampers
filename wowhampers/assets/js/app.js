@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			slidesPerView: 1,
 			spaceBetween: 20,
 			loop: true,
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
 				delay: 5000,
 				disableOnInteraction: false,

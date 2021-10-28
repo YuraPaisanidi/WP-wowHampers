@@ -36,7 +36,7 @@ add_action ( 'woocommerce_before_shop_loop_item_title', 'woocommerce_shop_item_i
 
 function woocommerce_shop_item_image() {
 	?>
-
+	
 		<?php the_post_thumbnail(); ?>
 	<?php
 }
@@ -70,4 +70,5 @@ function woocommerce_shop_item_btns() {
 
 	<?php
 }
+
 

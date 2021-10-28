@@ -25,12 +25,23 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div <?php wc_product_class( 'favorites__item swiper-slide', $product ); ?>>
+	
+	<?php if( have_rows('badge') ): ?>
+		<?php while( have_rows('badge') ): the_row(); 
+		$text = get_sub_field('text');
+		?>
+		<span class="gifts__slide_label"><?php echo $text; ?></span>
+		
+		<?php endwhile; ?>
+	<?php endif; ?>
+
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
+	 */	
 	do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
