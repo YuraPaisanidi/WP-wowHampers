@@ -18,14 +18,25 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<div class="shopping-cart__total <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
 
-		<div class="shopping-cart__price">
-			<p class="shopping-cart__price_desc"><?php esc_html_e( 'Summary:', 'woocommerce' ); ?></p>
+<div class="woocommerce__cart_totals cart_totals shopping-cart__total <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+
+	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
+
+	<div cellspacing="0" class="woocommerce__total shop_table shop_table_responsive">
+
+		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
+
+		<div class="woocommerce__order-total order-total shopping-cart__price">
+			<p class="class="shopping-cart__price_desc"><?php esc_html_e( 'Summary:', 'woocommerce' ); ?></p>
 			<p class="shopping-cart__price_item" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></p>
 		</div>
 
-	<div class="wc-proceed-to-checkout">
+		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+
+	</div>
+
+	<div class="woocommerce__wc-proceed-to-checkout wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
 

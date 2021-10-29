@@ -23,22 +23,42 @@ global $product;
 
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?> product__price_item"><?php echo $product->get_price_html(); ?></p>
+<script>
+		let priceText = document.querySelector('.product__price_item .amount').innerText.replace('$', '');
 
-<!-- <script>
-	let number = document.querySelector('.quantity .qty');
-	let price = document.querySelector('.product__price_item');
-	let priceText = document.querySelector('.product__price_item .amount').innerText.replace('$', '');
-	let numberValue = number.value;
+		const calculatePrice = (calcInc, calcSub) => {
 
-	const calculatePrice = () => {
-		let newPrice = priceText * number.value;
-		price.innerText ='$' + newPrice.toFixed(2);
-	}
+			document.querySelector(calcInc).addEventListener('click', function(e){
+				let number = document.querySelector('.quantity .qty');
+				let price = document.querySelector('.product__price_item');
+				let numberValue = 1;
 
-	document.querySelector('.wbu-btn-inc').addEventListener('click', calculatePrice);
-	document.querySelector('.wbu-btn-sub').addEventListener('click', calculatePrice);
+				if(numberValue === 1){
+					let newPrice = priceText * (Number(number.value) + 1) ;
+					price.innerText ='$' + newPrice.toFixed(2);
+					let numberValue = number.value;
+				} else {
+					let newPrice = priceText * number.value;
+					price.innerText ='$' + newPrice.toFixed(2);
+				}
 
+			});
+			document.querySelector(calcSub).addEventListener('click', function(e){
+				let number = document.querySelector('.quantity .qty');
+				let price = document.querySelector('.product__price_item');
+				let numberValue = Number(number.value);
+				
+				if(numberValue === 1){
+						let newPrice = Number(priceText);
+						price.innerText ='$' + newPrice.toFixed(2);
+				} else {
+						let newPrice = priceText * (Number(number.value) - 1);
+						price.innerText ='$' + newPrice.toFixed(2);
+				}
 
-	calculatePrice();
+			});
 
-</script> -->
+		};
+		calculatePrice('.wbu-btn-inc', '.wbu-btn-sub');
+
+</script>
