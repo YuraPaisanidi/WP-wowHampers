@@ -23,3 +23,22 @@ global $product;
 
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?> product__price_item"><?php echo $product->get_price_html(); ?></p>
+
+<!-- <script>
+	let number = document.querySelector('.quantity .qty');
+	let price = document.querySelector('.product__price_item');
+	let priceText = document.querySelector('.product__price_item .amount').innerText.replace('$', '');
+	let numberValue = number.value;
+
+	const calculatePrice = () => {
+		let newPrice = priceText * number.value;
+		price.innerText ='$' + newPrice.toFixed(2);
+	}
+
+	document.querySelector('.wbu-btn-inc').addEventListener('click', calculatePrice);
+	document.querySelector('.wbu-btn-sub').addEventListener('click', calculatePrice);
+
+
+	calculatePrice();
+
+</script> -->

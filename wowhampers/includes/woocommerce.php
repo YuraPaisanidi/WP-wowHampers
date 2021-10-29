@@ -348,4 +348,65 @@ function my_save_account($user_id) {
 
   $info  = ! empty( $_POST[ 'info' ] ) ? $_POST[ 'info' ] : '';
   update_user_meta($user_id, 'info', $info);
+
+	$date1  = ! empty( $_POST[ 'date1' ] ) ? $_POST[ 'date1' ] : '';
+  update_user_meta($user_id, 'date1', $date1);
+
+  $occasion1  = ! empty( $_POST[ 'occasion1' ] ) ? $_POST[ 'occasion1' ] : '';
+  update_user_meta($user_id, 'occasion1', $occasion1);
+
+  $info1  = ! empty( $_POST[ 'info1' ] ) ? $_POST[ 'info1' ] : '';
+  update_user_meta($user_id, 'info1', $info1);
+
+	$date2  = ! empty( $_POST[ 'date2' ] ) ? $_POST[ 'date2' ] : '';
+  update_user_meta($user_id, 'date2', $date2);
+
+  $occasion2  = ! empty( $_POST[ 'occasion2' ] ) ? $_POST[ 'occasion2' ] : '';
+  update_user_meta($user_id, 'occasion2', $occasion2);
+
+  $info2  = ! empty( $_POST[ 'info2' ] ) ? $_POST[ 'info2' ] : '';
+  update_user_meta($user_id, 'info2', $info2);
+}
+
+
+add_action( 'woocommerce_before_cart', 'truemisha_minimum_order_amount' );
+ 
+function truemisha_minimum_order_amount(){
+ 
+	$minimum_amount = 50;
+ 
+	if ( WC()->cart->subtotal < $minimum_amount ) {
+ 
+		wc_print_notice(
+			sprintf(
+				'The minimum order amount is %s, your current order amount is %s.' ,
+				wc_price( $minimum_amount ),
+				wc_price( WC()->cart->subtotal )
+			),
+			'notice'
+		);
+	}
+ 
+}
+
+
+add_action( 'woocommerce_checkout_process', 'truemisha_no_checkout_min_order_amount' );
+ 
+function truemisha_no_checkout_min_order_amount() {
+ 
+	$minimum_amount = 50;
+ 
+	if ( WC()->cart->subtotal < $minimum_amount ) {
+ 
+		wc_add_notice( 
+			sprintf( 
+				'The minimum order amount is %s, your current order amount is %s.',
+				wc_price( $minimum_amount ),
+				wc_price( WC()->cart->subtotal )
+			),
+			'error'
+		);
+ 
+	}
+ 
 }

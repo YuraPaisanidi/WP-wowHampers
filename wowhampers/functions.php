@@ -27,15 +27,19 @@ require get_template_directory() . '/includes/pagination.php';
 
 
 /**
- * Implement pagination
+ * Implement post-type
  */
 require get_template_directory() . '/includes/post-type.php';
 
 /**
- * Implement pagination
+ * Implement mini-cart
  */
 require get_template_directory() . '/includes/mini-cart.php';
 
+/**
+ * Implement cart
+ */
+require get_template_directory() . '/includes/cart.php';
 
 /**
  * Load WooCommerce compatibility file.

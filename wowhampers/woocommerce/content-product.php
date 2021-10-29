@@ -27,12 +27,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 <div <?php wc_product_class( 'favorites__item swiper-slide', $product ); ?>>
 	
 	<?php if( have_rows('badge') ): ?>
-		<?php while( have_rows('badge') ): the_row(); 
-		$text = get_sub_field('text');
-		?>
-		<span class="gifts__slide_label"><?php echo $text; ?></span>
-		
-		<?php endwhile; ?>
+		<div class="badge__wrap">
+			<?php while( have_rows('badge') ): the_row(); 
+			$text = get_sub_field('text');
+			?>
+			<span class="gifts__slide_label"><?php echo $text; ?></span>
+			
+			<?php endwhile; ?>
+		</div>
 	<?php endif; ?>
 
 

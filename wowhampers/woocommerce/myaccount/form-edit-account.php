@@ -55,6 +55,36 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="text" class="input-text" name="info" id="info" value="<?php echo esc_attr( $user->info ); ?>" />
 	</p>
 
+	<p class="form-row form-row-wide">
+		<label for="date1">Important date</label>
+		<input type="date" class="input-text" name="date1" id="date1" value="<?php echo esc_attr( $user->date1 ); ?>" required />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="occasion1">Occasion Name</label>
+		<input type="text" class="input-text" name="occasion1" id="occasion1" value="<?php echo esc_attr( $user->occasion1 ); ?>" required />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="info1">Info about the gift receiver: age, gender, hobbies, your relationship (parent, boyfriend, colleague, etc</label>
+		<input type="text" class="input-text" name="info1" id="info1" value="<?php echo esc_attr( $user->info1 ); ?>" />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="date2">Important date</label>
+		<input type="date" class="input-text" name="date2" id="date2" value="<?php echo esc_attr( $user->date2 ); ?>" required />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="occasion2">Occasion Name</label>
+		<input type="text" class="input-text" name="occasion2" id="occasion2" value="<?php echo esc_attr( $user->occasion2 ); ?>" required />
+	</p>
+
+	<p class="form-row form-row-wide">
+		<label for="info2">Info about the gift receiver: age, gender, hobbies, your relationship (parent, boyfriend, colleague, etc</label>
+		<input type="text" class="input-text" name="info2" id="info2" value="<?php echo esc_attr( $user->info2 ); ?>" />
+	</p>
+
 </div>
 
 	<fieldset class="profile__password">
